@@ -30,7 +30,7 @@ At the end of the quiz, the user will receive a score, a rank and links to addit
 ________________
 Landing Page | Overview Page | Quiz Pages | Results Page
 -------------|---------------|------------|-------------
-User clicks anywhere to begin. | Clicking the Landing page takes the user to an overview page, detailing the purpose of the game, an introduction to astrological terminology and a description of the game's structure. After reading, the player clicks a button to begin the timed quiz. | Randomly generated page from one to twelve, prompting user to match glyph to corresponding sign in zodiac. A timed countdown gives user fifteen seconds to answer. | Provides user their score and an associated rank (beginner / novice / expert etc). Provides them with resources for further astrological research, depending on their rank.
+User clicks anywhere to begin. | Clicking the Landing page takes the user to an overview page, detailing the purpose of the game, an introduction to astrological terminology and a description of the game's structure. After reading, the player clicks a button to begin the timed quiz. | Randomly generated page from one to twelve, prompting user to match glyph to corresponding sign in zodiac. A timed countdown gives user fifteen seconds to answer. | Provides user their score and an associated rank (beginner / novice / intermediate / expert). Provides them with resources for further astrological research, depending on their rank.
 
 ## **Wireframes**
 ________________
@@ -54,4 +54,20 @@ ________________
 ## **Tech**
 ________________
 
-HTML, CSS & Javascript
+
+Page | HTML | CSS | Javascript | Assets 
+-----|------|-----|------------|-------
+Landing | ```<img id="landing"> <div id="welcome"> <div id="click">```| flexbox | event listener for entire page | 12 zodiac glyph images
+Overview |
+12 Quiz | ```<radio>``` | | |
+4 Results | | | | 
+
+
+
+
+## **Stretch Goals**
+________________
+* Hints
+* Different levels / user chooses timer countdown length
+* Quiz for 7 traditional planets
+* Disabling other tabs during quiz runtime?
