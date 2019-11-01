@@ -37,11 +37,19 @@ ________________
 
 **Landing**
 
+![Landing page wireframe](/assets/wireframe/landing.jpg)
+
 **Overview**
+
+![Overview page wireframe](/assets/wireframe/overview.jpg)
 
 **Quiz**
 
+![Quiz page wireframe](/assets/wireframe/quiz.jpg)
+
 **Results**
+
+![Results page wireframe](/assets/wireframe/result.jpg)
 
 ## **Tech**
 ________________
