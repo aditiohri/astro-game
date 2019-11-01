@@ -69,6 +69,8 @@ Overview | | | |
 ## **Stretch Goals**
 ________________
 * Hints
-* Different levels / user chooses timer countdown length
+* Different levels 
+    + Different timer countdown runtimes
+    + More/less challenging clues
 * Quiz for 7 traditional planets
 * Disabling other tabs during quiz runtime?
