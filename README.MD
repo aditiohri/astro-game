@@ -58,9 +58,9 @@ ________________
 
 Page | HTML | CSS | Javascript | Assets 
 -----|------|-----|------------|-------
-Landing | ```<img id="landing"> <div id="welcome"> <div id="click">```| flexbox | event listener for entire page | 12 zodiac glyph images
-Overview | | | | 
-12 Quiz | ```<radio>``` | | |
+Landing | ```<img id="landing"> <div id="welcome"> <div id="click">```| flexbox | DOM Manipulation to generate all 18 pages through one html file | 12 zodiac glyph images
+Overview | | | update style; cache elements; event listeners | 
+12 Quiz | ```<radio>``` | | create objects for stored correct responses and user-generated objects for player responses ```let playerScore = []``` |
 4 Results | | | | 
 
 
