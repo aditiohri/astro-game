@@ -58,7 +58,7 @@ ________________
 Page | HTML | CSS | Javascript | Assets 
 -----|------|-----|------------|-------
 Landing | ```<img id="landing"> <div id="welcome"> <div id="click">```| flexbox | event listener for entire page | 12 zodiac glyph images
-Overview |
+Overview | | | | 
 12 Quiz | ```<radio>``` | | |
 4 Results | | | | 
 
