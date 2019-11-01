@@ -6,6 +6,7 @@
 2. User Stories
 3. Wireframes
 4. Tech
+5. Stretch Goals
 
 
 ## **Purpose**
