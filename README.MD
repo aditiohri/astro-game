@@ -1,7 +1,7 @@
 # **Astrology Quiz**
 
 
-### **Contents**
+### <a name="home"></a> **Contents**
 1. [Purpose](#purpose)
 2. [User Stories](#userstories)
 3. [Wireframes](#wireframes)
@@ -14,6 +14,8 @@ ________________
 <u>Goal</u>
 
 The growing popularity of astrology as a means to self-knowledge rather than a deterministic portrayal of one's fate is an empowering shift in self-help and pop psychology. Rather than taking for granted what experts tell us, everyday people are seeking resources for self-led study. This quiz is for early students of astrology to familiarize themselves with images that portray the signs and planets within a natal chart, also known as glyphs. Reading glyphs is an essential component to interpreting and understanding one's natal chart.
+
+[top](#home)
 
 <u>Rules</u>
 
@@ -32,6 +34,8 @@ ________________
 Landing Page | Overview Page | Quiz Pages | Results Page
 -------------|---------------|------------|-------------
 User clicks anywhere to begin. | Clicking the Landing page takes the user to an overview page, detailing the purpose of the game, an introduction to astrological terminology and a description of the game's structure. After reading, the player clicks a button to begin the timed quiz. | Randomly generated page from one to twelve, prompting user to match glyph to corresponding sign in zodiac. A timed countdown gives user fifteen seconds to answer. | Provides user their score and an associated rank (beginner / novice / intermediate / expert). Provides them with resources for further astrological research, depending on their rank.
+
+[top](#home)
 
  ## <a name="wireframes"></a>**Wireframes**
 ________________
@@ -52,9 +56,10 @@ ________________
 
 ![Results page wireframe](/assets/wireframe/result.JPG)
 
+[top](#home)
+
 ## <a name="tech"></a> **Tech**
 ________________
-
 
 Page | HTML | CSS | Javascript | Assets| Keywords To Research
 -----|------|-----|------------|-------|-----------
@@ -63,7 +68,7 @@ Overview | | | update style; cache elements; event listeners |
 12 Quiz | ```<radio>``` | | create objects for stored correct responses and user-generated objects for player responses; ```let playerScore = []```; callback functions |
 4 Results | | beginner;novice;intermediate;expert| | 
 
-
+[top](#home)
 
 
 ## <a name="stretch"></a> **Stretch Goals**
@@ -74,3 +79,5 @@ ________________
     + More/less challenging clues
 * Quiz for 7 traditional planets
 * Disabling other tabs during quiz runtime?
+
+[top](#home)
