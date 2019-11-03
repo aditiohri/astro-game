@@ -15,8 +15,6 @@ ________________
 
 The growing popularity of astrology as a means to self-knowledge rather than a deterministic portrayal of one's fate is an empowering shift in self-help and pop psychology. Rather than taking for granted what experts tell us, everyday people are seeking resources for self-led study. This quiz is for early students of astrology to familiarize themselves with images that portray the signs and planets within a natal chart, also known as glyphs. Reading glyphs is an essential component to interpreting and understanding one's natal chart.
 
-[top](#home)
-
 <u>Rules</u>
 
 The quiz consists of twelve questions - one of reach sign of the zodiac. On each of the twelve quiz pages, the user will be presented with a glyph of a sign alongside a brief description of the image and its corresponding sign. 
@@ -28,6 +26,8 @@ The user will have fifteen seconds to choose between four options. The quiz has 
 <u>Interaction</u>
 
 At the end of the quiz, the user will receive a score, a rank and links to additional resources to further their studies depending on their score.
+
+[top](#home)
 
 ## <a name="userstories"></a> **User Stories**
 ________________
