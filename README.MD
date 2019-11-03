@@ -2,14 +2,14 @@
 
 
 ### **Contents**
-1. Purpose
-2. User Stories
-3. Wireframes
-4. Tech
-5. Stretch Goals
+1. [Purpose](#purpose)
+2. [User Stories](#userstories)
+3. [Wireframes](#wireframes)
+4. [Tech](#tech)
+5. [Stretch Goals](#stretch)
 
 
-## **Purpose**
+<a name="purpose">## **Purpose**</a>
 ________________
 <u>Goal</u>
 
@@ -27,13 +27,13 @@ The user will have fifteen seconds to choose between four options. The quiz has 
 
 At the end of the quiz, the user will receive a score, a rank and links to additional resources to further their studies depending on their score.
 
-## **User Stories**
+<a name="userstories">## **User Stories**</a>
 ________________
 Landing Page | Overview Page | Quiz Pages | Results Page
 -------------|---------------|------------|-------------
 User clicks anywhere to begin. | Clicking the Landing page takes the user to an overview page, detailing the purpose of the game, an introduction to astrological terminology and a description of the game's structure. After reading, the player clicks a button to begin the timed quiz. | Randomly generated page from one to twelve, prompting user to match glyph to corresponding sign in zodiac. A timed countdown gives user fifteen seconds to answer. | Provides user their score and an associated rank (beginner / novice / intermediate / expert). Provides them with resources for further astrological research, depending on their rank.
 
-## **Wireframes**
+<a name="wireframes">## **Wireframes**</a>
 ________________
 
 **Landing**
@@ -52,7 +52,7 @@ ________________
 
 ![Results page wireframe](/assets/wireframe/result.JPG)
 
-## **Tech**
+<a name="tech">## **Tech**</a>
 ________________
 
 
@@ -66,7 +66,7 @@ Overview | | | update style; cache elements; event listeners |
 
 
 
-## **Stretch Goals**
+<a name="stretch">## **Stretch Goals**</a>
 ________________
 * Hints
 * Different levels 
