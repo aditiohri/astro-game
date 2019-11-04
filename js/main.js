@@ -129,9 +129,12 @@ const astroQuestions = [
 /*----- cached element references -----*/
   
   const quizContainer = document.getElementById('quiz');
+  const question = document.querySelectorAll('.slide');
   const resultsContainer = document.getElementById('results');
   const submitButton = document.getElementById('submit');
   const startButton = document.getElementById('welcome');
+  const skipButton = document.getElementById('skip');
+  const nextButton = document.getElementById('next');
   
 /*----- event listeners -----*/
 
@@ -142,12 +145,6 @@ const astroQuestions = [
 /*----- functions -----*/ 
 
   function buildQuiz() {
-    //pagination : show and hide questions
-    // show only one question at a time
-    // initial start quiz button only shows one question + skip/nextq button
-    //skip question button becomes next question button once answer is selected
-    //if last question, option to submit quiz
-    // nextq clears present question and shows next question
     const output = [];
     astroQuestions.forEach((currentQ, qNumber) => {
       const answers = [];
@@ -179,6 +176,26 @@ const astroQuestions = [
   quizContainer.innerHTML = output.join('');
   }
   
+  function showQuestion(x) {
+    //pagination : show and hide questions
+    // show only one question at a time
+    // display skip question button
+    // if answer is checked, show next question button 
+    // and remove display for skip question
+    // if final question, toggle bw skip button and submit button
+
+    question[currentq].classList.remove('active-slide');
+    question[x].classList.add('active-slide');
+    let currentQ = 0;
+    if (currentQ === question.length-1) {
+      nextButton.style.display = 'none';
+    }
+    //skip question button becomes next question button once answer is selected
+    //if last question, option to submit quiz
+    // nextq clears present question
+    // shows next question
+  }
+
   function showResults() {
     const answerContainers = quizContainer.querySelectorAll('.answers');
     let correctAnswers = 0;
@@ -203,7 +220,6 @@ const astroQuestions = [
   }
 
 
-// loads next question
 
   /* -----to do--------
   init / render function
