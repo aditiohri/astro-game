@@ -154,21 +154,22 @@ const astroQuestions = [
     for (letter in currentQ.answers) {
       answers.push(
         `<label>
-        <input type="radio" name="question${qNumber}" value="${letter}">
-        ${letter} : 
+        <input type="radio" name="question${qNumber}" value="${letter}"> 
         ${currentQ.answers[letter]}
         </label>`
       );
     }
     output.push(
-      `<div class ="question">
-        ${currentQ.question}
-      </div>
-      <div class="answers">
-        ${answers.join('')}
-      </div>
-      <div>
-      <button id="submit">Next Question</button>
+      `<div class="slide">
+        <div class ="question">
+          ${currentQ.question}
+        </div>
+        <div class="answers">
+          ${answers.join('')}
+        </div>
+        <div>
+        <button id="submit">Next Question</button>
+        </div>
       </div>
       `,
       );
