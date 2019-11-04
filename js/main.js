@@ -177,3 +177,11 @@ const astroQuestions = [
     resultsContainer.innerHTML = correctAnswers + ' out of ' + astroQuestions.length;
   }
   
+  /* -----to do--------
+  init / render function
+  pagination : show and hide questions
+  buttons to navigate quiz
+  make it impossible for user to advance without answering present question
+  call back function for 15 seconds per question
+  ------------------- */
+  
