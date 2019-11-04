@@ -160,6 +160,20 @@ const astroQuestions = [
   }
   
   function showResults() {
-  
+    const answerContainers = quizContainer.querySelectorAll('.answers')
+    let correctAnswers = 0;
+    astroQuestions.forEach((currentQ, qNumber) => {
+        const answerContainer = answerContainers[questionNumber];
+        const selector = 'input[name=question'+questionNumber+']:checked';
+        const userAnswer = (answerContainer.querySelector(selector) || {}).value;
+        if (userAnswer === currentQ.correctAnswer) {
+            correctAnswers++;
+        answerContainers[questionNumber].style.color = 'purple';
+        }
+        else {
+            answerContainers[questionNumber].style.color = 'orange';
+        }
+    });
+    resultsContainer.innerHTML = correctAnswers + ' out of ' + astroQuestions.length;
   }
   
