@@ -136,15 +136,18 @@ const astroQuestions = [
 /*----- event listeners -----*/
 
   startButton.addEventListener('click',  buildQuiz)
-  submitButton.addEventListener('click', showResults)
+  // submitButton.addEventListener('click', showResults)
   
 
 /*----- functions -----*/ 
 
   function buildQuiz() {
-    //option to skip question
-    //skip question button becomes next question once answer is selected
+    //pagination : show and hide questions
+    // show only one question at a time
+    // initial start quiz button only shows one question + skip/nextq button
+    //skip question button becomes next question button once answer is selected
     //if last question, option to submit quiz
+    // nextq clears present question and shows next question
     const output = [];
     astroQuestions.forEach((currentQ, qNumber) => {
       const answers = [];
@@ -198,10 +201,7 @@ const astroQuestions = [
 
   }
 
-//  pagination : show and hide questions
-//  add next question button  
-//    nextQBtn should only work when currentQ is answered
-// clears present question (toggle?)
+
 // loads next question
 
   /* -----to do--------
