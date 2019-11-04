@@ -79,5 +79,6 @@ ________________
     + More/less challenging clues
 * Quiz for 7 traditional planets
 * Disabling other tabs during quiz runtime?
+* Add a progress bar
 
 [top](#home)
