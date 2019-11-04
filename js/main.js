@@ -125,8 +125,6 @@ const astroQuestions = [
 
 /*----- app's state (variables) -----*/
 
-const output = [];
-const answers = []
 
 /*----- cached element references -----*/
   
@@ -144,18 +142,25 @@ const answers = []
 buildQuiz(); 
 
   function buildQuiz() {
-  astroQuestions.forEach((currentQ, qNumber) => {
+    const output = [];
+    astroQuestions.forEach((currentQ, qNumber) => {
+      const answers = [];
     for (letter in currentQ.answers) {
       answers.push(
         `<label>
         <input type="radio" name="question${qNumber}" value="${letter}">
-        ${letter}: ${currentQ.answers[letter]}
+        ${letter} : 
+        ${currentQ.answers[letter]}
         </label>`
       );
     }
     output.push(
-      `<div class ="question"> ${currentQ.question}</div>
-      <div class="answers"${answers.join('')}</div>`
+      `<div class ="question">
+        ${currentQ.question}
+      </div>
+      <div class="answers">
+        ${answers.join('')}
+      </div>`
     );
   }
   );
@@ -163,7 +168,7 @@ buildQuiz();
   }
   
   function showResults() {
-    const answerContainers = quizContainer.querySelectorAll('.answers')
+    const answerContainers = quizContainer.querySelectorAll('.answers');
     let correctAnswers = 0;
     astroQuestions.forEach((currentQ, qNumber) => {
         const answerContainer = answerContainers[qNumber];
@@ -187,7 +192,7 @@ buildQuiz();
   /* -----to do--------
   init / render function
   pagination : show and hide questions
-  randomize question appearance
+  randomize question order
   buttons to navigate quiz
   make it impossible for user to advance without answering present question
   call back function for 15 seconds per question
