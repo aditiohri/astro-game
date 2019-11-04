@@ -142,6 +142,9 @@ const astroQuestions = [
 /*----- functions -----*/ 
 
   function buildQuiz() {
+    //option to skip question
+    //skip question button becomes next question once answer is selected
+    //if last question, option to submit quiz
     const output = [];
     astroQuestions.forEach((currentQ, qNumber) => {
       const answers = [];
