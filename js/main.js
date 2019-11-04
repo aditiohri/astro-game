@@ -125,11 +125,12 @@ const astroQuestions = [
 
 /*----- app's state (variables) -----*/
 
+let currentQ = 0;
 
 /*----- cached element references -----*/
   
   const quizContainer = document.getElementById('quiz');
-  const question = document.querySelectorAll('.slide');
+  const question = document.getElementsByClassName('slide');
   const resultsContainer = document.getElementById('results');
   const submitButton = document.getElementById('submit');
   const startButton = document.getElementById('welcome');
@@ -138,8 +139,11 @@ const astroQuestions = [
   
 /*----- event listeners -----*/
 
-  startButton.addEventListener('click',  buildQuiz)
-  // submitButton.addEventListener('click', showResults)
+  startButton.addEventListener('click',  showQuestion)
+  skipButton.addEventListener('click', skipQuestion)
+  nextButton.addEventListener('click', showNextQuestion)
+  submitButton.addEventListener('click', showResults)
+
   
 
 /*----- functions -----*/ 
@@ -164,9 +168,6 @@ const astroQuestions = [
         <div class="answers">
           ${answers.join('')}
         </div>
-        <div>
-        <button id="submit">Next Question</button>
-        </div>
       </div>
       `,
       );
@@ -176,7 +177,8 @@ const astroQuestions = [
   quizContainer.innerHTML = output.join('');
   }
   
-  function showQuestion(x) {
+  function showQuestion(currentQ) {
+    buildQuiz();
     //pagination : show and hide questions
     // show only one question at a time
     // display skip question button
@@ -184,16 +186,29 @@ const astroQuestions = [
     // and remove display for skip question
     // if final question, toggle bw skip button and submit button
 
-    question[currentq].classList.remove('active-slide');
+    question[currentQ].classList.remove('active-slide');
     question[x].classList.add('active-slide');
-    let currentQ = 0;
     if (currentQ === question.length-1) {
+      skipButton.style.display = 'inline-block';
       nextButton.style.display = 'none';
+      submitButton.style.display = 'inline-block';
+    }
+    else {
+      skipButton.style.display = 'inline-block';
+      nextButton.style.display = 'inline-block';
+      submitButton.style.display = 'none';
+
     }
     //skip question button becomes next question button once answer is selected
     //if last question, option to submit quiz
     // nextq clears present question
     // shows next question
+  }
+  function showNextQuestion(){
+    showQuestion(currentQ + 1);
+  }
+  function skipQuestion() {
+    showQuestion(currentQ + 1);
   }
 
   function showResults() {
