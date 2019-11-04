@@ -128,7 +128,6 @@ const astroQuestions = [
 const output = [];
 const answers = []
 
-
 /*----- cached element references -----*/
   
   const quizContainer = document.getElementById('quiz');
@@ -141,6 +140,8 @@ const answers = []
   
 
 /*----- functions -----*/
+
+buildQuiz(); 
 
   function buildQuiz() {
   astroQuestions.forEach((currentQ, qNumber) => {
@@ -179,11 +180,15 @@ const answers = []
     resultsContainer.innerHTML = correctAnswers + ' out of ' + astroQuestions.length;
   }
   
+  function rankResults() {
+    //  include levels for different results 
+
+  }
   /* -----to do--------
   init / render function
   pagination : show and hide questions
+  randomize question appearance
   buttons to navigate quiz
-  include levels for different results rankings
   make it impossible for user to advance without answering present question
   call back function for 15 seconds per question
   ------------------- */
