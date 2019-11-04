@@ -125,6 +125,10 @@ const astroQuestions = [
 
 /*----- app's state (variables) -----*/
 
+const output = [];
+const answers = []
+
+
 /*----- cached element references -----*/
   
   const quizContainer = document.getElementById('quiz');
@@ -139,9 +143,7 @@ const astroQuestions = [
 /*----- functions -----*/
 
   function buildQuiz() {
-  const output = [];
   astroQuestions.forEach((currentQ, qNumber) => {
-    const answers = [],
     for (letter in currentQ.answers) {
       answers.push(
         `<label>
@@ -181,6 +183,7 @@ const astroQuestions = [
   init / render function
   pagination : show and hide questions
   buttons to navigate quiz
+  include levels for different results rankings
   make it impossible for user to advance without answering present question
   call back function for 15 seconds per question
   ------------------- */
