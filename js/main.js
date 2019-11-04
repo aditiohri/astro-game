@@ -125,7 +125,7 @@ const astroQuestions = [
 
 /*----- app's state (variables) -----*/
 
-let currentQ = 0;
+let currentSlide = 0;
 
 /*----- cached element references -----*/
   
@@ -139,7 +139,7 @@ let currentQ = 0;
   
 /*----- event listeners -----*/
 
-  startButton.addEventListener('click',  showQuestion)
+  startButton.addEventListener('click', buildQuiz)
   skipButton.addEventListener('click', skipQuestion)
   nextButton.addEventListener('click', showNextQuestion)
   submitButton.addEventListener('click', showResults)
@@ -147,38 +147,41 @@ let currentQ = 0;
   
 
 /*----- functions -----*/ 
-
-  function buildQuiz() {
+function buildQuiz() {
+  astroQuestions.forEach((currentQ, qNumber) => {
     const output = [];
     astroQuestions.forEach((currentQ, qNumber) => {
       const answers = [];
     for (letter in currentQ.answers) {
       answers.push(
         `<label>
-        <input type="radio" name="question${qNumber}" value="${letter}"> 
+        <input type="radio" name="question${qNumber}" value="${letter}">
+        ${letter}: ${currentQ.answers[letter]}
+        ${letter} : 
         ${currentQ.answers[letter]}
         </label>`
       );
     }
     output.push(
-      `<div class="slide">
-        <div class ="question">
-          ${currentQ.question}
-        </div>
-        <div class="answers">
-          ${answers.join('')}
-        </div>
+      `<div class ="question"> ${currentQ.question}</div>
+      <div class="answers"${answers.join('')}</div>`
+      `<div class ="question">
+        ${currentQ.question}
       </div>
-      `,
-      );
-    }
+      <div class="answers">
+        ${answers.join('')}
+      </div>`
     );
-  startButton.parentNode.removeChild(startButton);
-  quizContainer.innerHTML = output.join('');
   }
+  );
+  quizContainer.innerHTML = output.join('');
+  });
+
+function showFirstQuestion() {
+  showQuestion(0);
+}
   
-  function showQuestion(currentQ) {
-    buildQuiz();
+  function showQuestion(x) {
     //pagination : show and hide questions
     // show only one question at a time
     // display skip question button
@@ -186,9 +189,9 @@ let currentQ = 0;
     // and remove display for skip question
     // if final question, toggle bw skip button and submit button
 
-    question[currentQ].classList.remove('active-slide');
+    question[currentSlide].classList.remove('active-slide');
     question[x].classList.add('active-slide');
-    if (currentQ === question.length-1) {
+    if (currentSlide === question.length-1) {
       skipButton.style.display = 'inline-block';
       nextButton.style.display = 'none';
       submitButton.style.display = 'inline-block';
@@ -244,4 +247,3 @@ let currentQ = 0;
   make it impossible for user to advance without answering present question
   call back function for 15 seconds per question
   ------------------- */
-  
