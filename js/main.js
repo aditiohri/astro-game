@@ -148,8 +148,7 @@ function buildQuiz() {
   for (letter in currentQ.answers) {
     answers.push(
       `<label>
-      <input type="radio" name="question${qNumber}" value="${letter}">
-      ${letter} : 
+      <input type="radio" name="question${qNumber}" value="${letter}"> 
       ${currentQ.answers[letter]}
       </label>`
     );
