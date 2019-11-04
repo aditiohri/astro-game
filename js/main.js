@@ -131,15 +131,15 @@ const astroQuestions = [
   const quizContainer = document.getElementById('quiz');
   const resultsContainer = document.getElementById('results');
   const submitButton = document.getElementById('submit');
+  const startButton = document.getElementById('welcome');
   
 /*----- event listeners -----*/
 
+  startButton.addEventListener('click',  buildQuiz)
   submitButton.addEventListener('click', showResults)
   
 
-/*----- functions -----*/
-
-buildQuiz(); 
+/*----- functions -----*/ 
 
   function buildQuiz() {
     const output = [];
@@ -160,10 +160,15 @@ buildQuiz();
       </div>
       <div class="answers">
         ${answers.join('')}
-      </div>`
+      </div>
+      <div>
+      <button id="submit">Next Question</button>
+      </div>
+      `,
+      );
+    }
     );
-  }
-  );
+  startButton.parentNode.removeChild(startButton);
   quizContainer.innerHTML = output.join('');
   }
   
@@ -189,6 +194,13 @@ buildQuiz();
     //  include levels for different results 
 
   }
+
+//  pagination : show and hide questions
+//  add next question button  
+//    nextQBtn should only work when currentQ is answered
+// clears present question (toggle?)
+// loads next question
+
   /* -----to do--------
   init / render function
   pagination : show and hide questions
