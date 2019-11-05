@@ -128,110 +128,6 @@ const astroQuestions = [
 let currentSlide = 0;
 
 /*----- cached element references -----*/
-<<<<<<< HEAD
-  
-  const quizContainer = document.getElementById('quiz');
-  const question = document.getElementsByClassName('slide');
-  const resultsContainer = document.getElementById('results');
-  const submitButton = document.getElementById('submit');
-  const startButton = document.getElementById('welcome');
-  const skipButton = document.getElementById('skip');
-  const nextButton = document.getElementById('next');
-  
-/*----- event listeners -----*/
-
-  startButton.addEventListener('click', buildQuiz)
-  skipButton.addEventListener('click', skipQuestion)
-  nextButton.addEventListener('click', showNextQuestion)
-  submitButton.addEventListener('click', showResults)
-
-  
-
-/*----- functions -----*/ 
-function buildQuiz() {
-  astroQuestions.forEach((currentQ, qNumber) => {
-    const output = [];
-    astroQuestions.forEach((currentQ, qNumber) => {
-      const answers = [];
-    for (letter in currentQ.answers) {
-      answers.push(
-        `<label>
-        <input type="radio" name="question${qNumber}" value="${letter}">
-        ${letter}: ${currentQ.answers[letter]}
-        ${letter} : 
-        ${currentQ.answers[letter]}
-        </label>`
-      );
-    }
-    output.push(
-      `<div class ="question"> ${currentQ.question}</div>
-      <div class="answers"${answers.join('')}</div>`
-      `<div class ="question">
-        ${currentQ.question}
-      </div>
-      <div class="answers">
-        ${answers.join('')}
-      </div>`
-    );
-  }
-  );
-  quizContainer.innerHTML = output.join('');
-  });
-
-function showFirstQuestion() {
-  showQuestion(0);
-}
-  
-  function showQuestion(x) {
-    //pagination : show and hide questions
-    // show only one question at a time
-    // display skip question button
-    // if answer is checked, show next question button 
-    // and remove display for skip question
-    // if final question, toggle bw skip button and submit button
-
-    question[currentSlide].classList.remove('active-slide');
-    question[x].classList.add('active-slide');
-    if (currentSlide === question.length-1) {
-      skipButton.style.display = 'inline-block';
-      nextButton.style.display = 'none';
-      submitButton.style.display = 'inline-block';
-    }
-    else {
-      skipButton.style.display = 'inline-block';
-      nextButton.style.display = 'inline-block';
-      submitButton.style.display = 'none';
-
-    }
-    //skip question button becomes next question button once answer is selected
-    //if last question, option to submit quiz
-    // nextq clears present question
-    // shows next question
-  }
-  function showNextQuestion(){
-    showQuestion(currentQ + 1);
-  }
-  function skipQuestion() {
-    showQuestion(currentQ + 1);
-  }
-
-  function showResults() {
-    const answerContainers = quizContainer.querySelectorAll('.answers');
-    let correctAnswers = 0;
-    astroQuestions.forEach((currentQ, qNumber) => {
-        const answerContainer = answerContainers[qNumber];
-        const selector = `input[name=question${qNumber}]:checked`;
-        const userAnswer = (answerContainer.querySelector(selector) || {}).value;
-        if (userAnswer === currentQ.correctAnswer) {
-            correctAnswers++;
-        answerContainers[qNumber].style.color = 'purple';
-        }
-        else {
-            answerContainers[qNumber].style.color = 'orange';
-        }
-    });
-    resultsContainer.innerHTML = correctAnswers + ' out of ' + astroQuestions.length;
-=======
 
 const quizContainer = document.getElementById('quiz');
 const resultsContainer = document.getElementById('results');
@@ -285,7 +181,6 @@ function buildQuiz() {
     </div>
     `,
     );
->>>>>>> astro-gameBACKUP
   }
   );
 startButton.parentNode.removeChild(startButton);
@@ -336,17 +231,6 @@ function rankResults() {
 
 }
 
-<<<<<<< HEAD
-
-  /* -----to do--------
-  init / render function
-  pagination : show and hide questions
-  randomize question order
-  buttons to navigate quiz
-  make it impossible for user to advance without answering present question
-  call back function for 15 seconds per question
-  ------------------- */
-=======
 function init () {
   buildQuiz();
   showSlides(0);
@@ -357,4 +241,3 @@ randomize question order
 buttons to navigate quiz
 call back function for 15 seconds per question
 ------------------- */
->>>>>>> astro-gameBACKUP
