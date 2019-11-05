@@ -128,6 +128,7 @@ const astroQuestions = [
 let slides;
 let currentSlide = 0;
 
+
 /*----- cached element references -----*/
 
 const quizContainer = document.getElementById('quiz');
@@ -144,6 +145,8 @@ nextButton.addEventListener('click', showNextSlide)
 
 
 /*----- functions -----*/ 
+nextButton.style.display = "none";
+submitButton.style.display = "none";
 
 function buildQuiz() {
   const output = [];
@@ -227,11 +230,10 @@ function rankResults() {
 function init () {
   buildQuiz();
   showSlides(0);
+  resultsContainer.innerHTML = "";
 }
 
 /* -----to do--------
-create a new page for 
 randomize question order
-buttons to navigate quiz
 call back function for 15 seconds per question
 ------------------- */
