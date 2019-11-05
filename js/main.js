@@ -197,6 +197,8 @@ function showNextSlide() {
 }
 
 function showResults() {
+  slides[currentSlide].classList.remove('active-slide');
+  slides[currentSlide].classList.add('slide');
   const answerContainers = quizContainer.querySelectorAll('.answers');
   let correctAnswers = 0;
   astroQuestions.forEach((currentQ, qNumber) => {
@@ -211,6 +213,9 @@ function showResults() {
           answerContainers[qNumber].style.color = 'orange';
       }
   });
+  quizContainer.appendChild(startButton);
+  startButton.textContent = "Take the quiz again!";
+  submitButton.parentNode.removeChild(submitButton);
   resultsContainer.innerHTML = correctAnswers + ' out of ' + astroQuestions.length;
 }
 
