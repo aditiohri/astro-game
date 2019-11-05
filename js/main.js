@@ -133,7 +133,7 @@ const resultsContainer = document.getElementById('results');
 const submitButton = document.getElementById('submit');
 const nextButton = document.getElementById('next')
 const startButton = document.getElementById('welcome');
-let slides = undefined; // initialize this to undefined
+let slides;
 let currentSlide = 0;
 
 /*----- event listeners -----*/
@@ -157,15 +157,6 @@ function init () {
 // if answer is checked, skip q btn disappears
 // and next question button appears, bringing user to next q
 
-
-function showSlides(currentSlide) {
-  console.log(currentSlide)
-  console.log(slides)
-  let a = slides[currentSlide].classList.toggle('active-slide');
-  console.log(a);
-  // slides(x).classList.add('active-slide');
-  // if (currentSlide === slides.)
-}
 
 function buildQuiz() {
   const output = [];
@@ -198,6 +189,19 @@ quizContainer.innerHTML = output.join('');
 slides = document.querySelectorAll('.slide');
 }
 
+
+function showSlides(x) {
+  slides[currentSlide].classList.remove('active-slide');
+  slides[x].classList.add('active-slide');
+  currentSlide = x;
+  if (currentSlide === slides.length-1) {
+    nextButton.style.display = "none";
+    submitButton.style.display = "inline-block";
+  } else {
+    nextButton.style.display = "inline-block";
+    submitButton.style.display = "none";
+  }
+}
 
 function showResults() {
   const answerContainers = quizContainer.querySelectorAll('.answers');
