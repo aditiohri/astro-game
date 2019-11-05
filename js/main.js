@@ -146,6 +146,15 @@ function init () {
   // showSlides();
 }
 
+//PAGINATION
+// show and hide questions
+// buildQuiz assigns css display to current question
+// and none for all remaining questions
+// add skip question button
+// if answer is checked, skip q btn disappears
+// and next question button appears, bringing user to next q
+
+
 function showSlides() {
 
 }
@@ -180,13 +189,6 @@ startButton.parentNode.removeChild(startButton);
 quizContainer.innerHTML = output.join('');
 }
 
-//PAGINATION
-// show and hide questions
-// buildQuiz assigns css display to current question
-// and none for all remaining questions
-// add skip question button
-// if answer is checked, skip q btn disappears
-// and next question button appears, bringing user to next q
 
 function showResults() {
   const answerContainers = quizContainer.querySelectorAll('.answers');
