@@ -133,12 +133,12 @@ const resultsContainer = document.getElementById('results');
 const submitButton = document.getElementById('submit');
 const nextButton = document.getElementById('next')
 const startButton = document.getElementById('welcome');
-const slides = document.querySelectorAll('.slide')
+let slides = undefined; // initialize this to undefined
 let currentSlide = 0;
 
 /*----- event listeners -----*/
 
-startButton.addEventListener('click', buildQuiz)
+startButton.addEventListener('click', init)
 submitButton.addEventListener('click', showResults)
 
 
@@ -158,9 +158,13 @@ function init () {
 // and next question button appears, bringing user to next q
 
 
-function showSlides(x) {
-  slides[currentSlide].classList.remove('active-slide');
-  slides(x).classList.add('active-slide');
+function showSlides(currentSlide) {
+  console.log(currentSlide)
+  console.log(slides)
+  let a = slides[currentSlide].classList.toggle('active-slide');
+  console.log(a);
+  // slides(x).classList.add('active-slide');
+  // if (currentSlide === slides.)
 }
 
 function buildQuiz() {
@@ -191,6 +195,7 @@ function buildQuiz() {
   );
 startButton.parentNode.removeChild(startButton);
 quizContainer.innerHTML = output.join('');
+slides = document.querySelectorAll('.slide');
 }
 
 
