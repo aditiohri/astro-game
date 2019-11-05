@@ -145,10 +145,7 @@ nextButton.addEventListener('click', showNextSlide)
 
 /*----- functions -----*/ 
 
-function init () {
-  buildQuiz();
-  showSlides(0);
-}
+
 
 //PAGINATION
 // show and hide questions
@@ -192,11 +189,14 @@ slides = document.querySelectorAll('.slide');
 
 
 function showSlides(x) {
-  slides[currentSlide].classList.toggle('slide');
-  console.log('first log from showSlides:', slides[currentSlide]);
-  slides[x].classList.toggle('active-slide');
+// how to clear previous slide and make second slide load right away?
+  slides[currentSlide].classList.remove('active-slide');
+  slides[currentSlide].classList.add('slide');
+  console.log('inheritd currentSlide val:', currentSlide);
   currentSlide = x;
-  console.log('second log from showSlides:', slides[currentSlide]);
+  slides[x].classList.remove('slide');
+  slides[x].classList.add('active-slide');
+  console.log('updated currentSlide val:', currentSlide)
   if (currentSlide === slides.length-1) {
     nextButton.style.display = "none";
     submitButton.style.display = "inline-block";
@@ -233,7 +233,10 @@ function rankResults() {
 
 }
 
-
+function init () {
+  buildQuiz();
+  showSlides(0);
+}
 
 /* -----to do--------
 init / render function
