@@ -146,7 +146,7 @@ submitButton.addEventListener('click', showResults)
 
 function init () {
   buildQuiz();
-  // showSlides();
+  showSlides(currentSlide);
 }
 
 //PAGINATION
@@ -159,7 +159,8 @@ function init () {
 
 
 function showSlides(x) {
-
+  slides[currentSlide].classList.remove('active-slide');
+  slides(x).classList.add('active-slide');
 }
 
 function buildQuiz() {
