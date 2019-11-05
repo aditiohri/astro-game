@@ -140,13 +140,14 @@ let currentSlide = 0;
 
 startButton.addEventListener('click', init)
 submitButton.addEventListener('click', showResults)
+nextButton.addEventListener('click', showNextSlide)
 
 
 /*----- functions -----*/ 
 
 function init () {
   buildQuiz();
-  showSlides(currentSlide);
+  showSlides(0);
 }
 
 //PAGINATION
@@ -201,6 +202,10 @@ function showSlides(x) {
     nextButton.style.display = "inline-block";
     submitButton.style.display = "none";
   }
+}
+
+function showNextSlide() {
+  showSlides(currentSlide + 1);
 }
 
 function showResults() {
