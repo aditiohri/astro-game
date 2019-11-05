@@ -141,6 +141,15 @@ submitButton.addEventListener('click', showResults)
 
 /*----- functions -----*/ 
 
+function init () {
+  buildQuiz();
+  // showSlides();
+}
+
+function showSlides() {
+
+}
+
 function buildQuiz() {
   const output = [];
   astroQuestions.forEach((currentQ, qNumber) => {
@@ -154,15 +163,16 @@ function buildQuiz() {
     );
   }
   output.push(
-    `<div class ="question">
-      ${currentQ.question}
+    `
+    <div class ="slide">
+      <div class ="question">
+        ${currentQ.question}
+      </div>
+      <div class="answers">
+        ${answers.join('')}
+      </div>
     </div>
-    <div class="answers">
-      ${answers.join('')}
-    </div>
-    <div>
-    <button id="submit">Next Question</button>
-    </div>`,
+    `,
     );
   }
   );
