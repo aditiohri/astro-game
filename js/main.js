@@ -123,8 +123,10 @@ const astroQuestions = [
   },
 ]
 
+
 /*----- app's state (variables) -----*/
 
+let astroQuestionsRandom;
 let slides;
 let currentSlide = 0;
 
@@ -149,17 +151,18 @@ nextButton.style.display = "none";
 submitButton.style.display = "none";
 
 function shuffle(array) {
+  // create a new array of empty objects
+  // using shuffle, grab objects from astroQuestions
+  // push astroQuestions objects into new array
   for (let i = array.length - 1; i > 0; i--) {
     let j = Math.floor(Math.random() * (i + 1));
-  }
-  // randomize question order
-// take existing order of astroQuestions
-// create a new array with random order bw 1-12
+    return array[j];
+    }
 }
 
 function buildQuiz() {
   const output = [];
-  astroQuestions.forEach((currentQ, qNumber) => {
+  astroQuestionsRandom.forEach((currentQ, qNumber) => {
     const answers = [];
   for (letter in currentQ.answers) {
     answers.push(
