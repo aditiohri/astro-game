@@ -192,9 +192,11 @@ slides = document.querySelectorAll('.slide');
 
 
 function showSlides(x) {
-  slides[currentSlide].classList.remove('active-slide');
-  slides[x].classList.add('active-slide');
+  slides[currentSlide].classList.toggle('slide');
+  console.log('first log from showSlides:', slides[currentSlide]);
+  slides[x].classList.toggle('active-slide');
   currentSlide = x;
+  console.log('second log from showSlides:', slides[currentSlide]);
   if (currentSlide === slides.length-1) {
     nextButton.style.display = "none";
     submitButton.style.display = "inline-block";
