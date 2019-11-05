@@ -131,6 +131,7 @@ const astroQuestions = [
 const quizContainer = document.getElementById('quiz');
 const resultsContainer = document.getElementById('results');
 const submitButton = document.getElementById('submit');
+const nextButton = document.getElementById('next')
 const startButton = document.getElementById('welcome');
 
 /*----- event listeners -----*/
