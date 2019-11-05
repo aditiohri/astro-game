@@ -133,6 +133,7 @@ const resultsContainer = document.getElementById('results');
 const submitButton = document.getElementById('submit');
 const nextButton = document.getElementById('next')
 const startButton = document.getElementById('welcome');
+const slides = document.querySelectorAll('.slide')
 let currentSlide = 0;
 
 /*----- event listeners -----*/
