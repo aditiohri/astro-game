@@ -126,7 +126,7 @@ const astroQuestions = [
 
 /*----- app's state (variables) -----*/
 
-let astroQuestionsRandom;
+let astroQuestionsRandom = [];
 let slides;
 let currentSlide = 0;
 
@@ -151,13 +151,16 @@ nextButton.style.display = "none";
 submitButton.style.display = "none";
 
 function shuffle(array) {
+  let newArray = [];
+  let j = [];
   // create a new array of empty objects
   // using shuffle, grab objects from astroQuestions
   // push astroQuestions objects into new array
-  for (let i = array.length - 1; i > 0; i--) {
-    let j = Math.floor(Math.random() * (i + 1));
-    return array[j];
-    }
+  for (let i = array.length; i > 0; i--) {
+    j = Math.floor(Math.random() * (i + 1));
+    newArray.push(array[j]);
+  }
+  return newArray;
 }
 
 function buildQuiz() {
@@ -240,6 +243,7 @@ function rankResults() {
 }
 
 function init () {
+  astroQuestionsRandom = shuffle(astroQuestions);
   buildQuiz();
   showSlides(0);
   resultsContainer.innerHTML = "";
