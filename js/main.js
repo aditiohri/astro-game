@@ -148,6 +148,15 @@ nextButton.addEventListener('click', showNextSlide)
 nextButton.style.display = "none";
 submitButton.style.display = "none";
 
+function shuffle(array) {
+  for (let i = array.length - 1; i > 0; i--) {
+    let j = Math.floor(Math.random() * (i + 1));
+  }
+  // randomize question order
+// take existing order of astroQuestions
+// create a new array with random order bw 1-12
+}
+
 function buildQuiz() {
   const output = [];
   astroQuestions.forEach((currentQ, qNumber) => {
@@ -234,6 +243,6 @@ function init () {
 }
 
 /* -----to do--------
-randomize question order
 call back function for 15 seconds per question
+customize results page with different output according to different scores
 ------------------- */
