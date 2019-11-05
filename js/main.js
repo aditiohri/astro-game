@@ -133,6 +133,7 @@ const resultsContainer = document.getElementById('results');
 const submitButton = document.getElementById('submit');
 const nextButton = document.getElementById('next')
 const startButton = document.getElementById('welcome');
+let currentSlide = 0;
 
 /*----- event listeners -----*/
 
@@ -156,7 +157,7 @@ function init () {
 // and next question button appears, bringing user to next q
 
 
-function showSlides() {
+function showSlides(x) {
 
 }
 
