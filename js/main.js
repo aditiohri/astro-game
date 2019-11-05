@@ -189,14 +189,11 @@ slides = document.querySelectorAll('.slide');
 
 
 function showSlides(x) {
-// how to clear previous slide and make second slide load right away?
   slides[currentSlide].classList.remove('active-slide');
   slides[currentSlide].classList.add('slide');
-  console.log('inheritd currentSlide val:', currentSlide);
   currentSlide = x;
   slides[x].classList.remove('slide');
   slides[x].classList.add('active-slide');
-  console.log('updated currentSlide val:', currentSlide)
   if (currentSlide === slides.length-1) {
     nextButton.style.display = "none";
     submitButton.style.display = "inline-block";
@@ -239,10 +236,7 @@ function init () {
 }
 
 /* -----to do--------
-init / render function
-pagination : show and hide questions
 randomize question order
 buttons to navigate quiz
-make it impossible for user to advance without answering present question
 call back function for 15 seconds per question
 ------------------- */

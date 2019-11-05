@@ -79,6 +79,8 @@ ________________
     + More/less challenging clues
 * Quiz for 7 traditional planets
 * Disabling other tabs during quiz runtime?
+* A skip question button that turns into the next question button after user answers q
 * Add a progress bar
+* Make it impossible for user to advance without answering present question
 
 [top](#home)
