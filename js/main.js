@@ -125,6 +125,7 @@ const astroQuestions = [
 
 /*----- app's state (variables) -----*/
 
+let slides;
 let currentSlide = 0;
 
 /*----- cached element references -----*/
@@ -134,8 +135,6 @@ const resultsContainer = document.getElementById('results');
 const submitButton = document.getElementById('submit');
 const nextButton = document.getElementById('next')
 const startButton = document.getElementById('welcome');
-let slides;
-let currentSlide = 0;
 
 /*----- event listeners -----*/
 
@@ -145,17 +144,6 @@ nextButton.addEventListener('click', showNextSlide)
 
 
 /*----- functions -----*/ 
-
-
-
-//PAGINATION
-// show and hide questions
-// buildQuiz assigns css display to current question
-// and none for all remaining questions
-// add skip question button
-// if answer is checked, skip q btn disappears
-// and next question button appears, bringing user to next q
-
 
 function buildQuiz() {
   const output = [];
@@ -237,6 +225,7 @@ function init () {
 }
 
 /* -----to do--------
+create a new page for 
 randomize question order
 buttons to navigate quiz
 call back function for 15 seconds per question
