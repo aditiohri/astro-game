@@ -141,9 +141,10 @@ const startButton = document.getElementById('welcome');
 
 /*----- event listeners -----*/
 
-startButton.addEventListener('click', init)
-submitButton.addEventListener('click', showResults)
-nextButton.addEventListener('click', showNextSlide)
+startButton.addEventListener('click', init);
+startButton.addEventListener('click', startInterval);
+submitButton.addEventListener('click', showResults);
+nextButton.addEventListener('click', showNextSlide);
 
 
 /*----- functions -----*/ 
@@ -174,6 +175,10 @@ function buildQuiz() {
   }
   output.push(
     `
+    <p class="clock">
+    <span="mins"></span>
+    <span="secs"></span>
+    </p>
     <div class ="slide">
       <div class ="question">
         ${currentQ.question}
