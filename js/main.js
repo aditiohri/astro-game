@@ -129,9 +129,6 @@ const astroQuestions = [
 let astroQuestionsRandom = [];
 let slides;
 let currentSlide = 0;
-let secondCount = 0;
-let stopWatch;
-
 
 /*----- cached element references -----*/
 
@@ -165,21 +162,44 @@ function shuffle(array) {
   return newArray;
 }
 
-function displayCount() {
-  let minutes = Math.floor((secondCount % 3600) / 60);
-  let seconds = Math.floor(secondCount % 60);
+// function displayCount() {
+//   let minutes = Math.floor((secondCount % 3600) / 60);
+//   let seconds = Math.floor(secondCount % 60);
 
-  let displayMinutes = minutes < 10 ? "0" + minutes : minutes;
-  let displaySeconds = seconds < 10 ? "0" + seconds : seconds;
+//   let displayMinutes = minutes < 10 ? "0" + minutes : minutes;
+//   let displaySeconds = seconds < 10 ? "0" + seconds : seconds;
 
-  displayClock.textContent = displayMinutes + ":" + displaySeconds;
+//   displayClock.textContent = displayMinutes + ":" + displaySeconds;
 
-  secondCount++;
+//   secondCount++; 
+  
+
+// }
+
+// function startInterval() {
+//   stopWatch = setInterval(displayCount, 1000);
+// }
+
+function displayCount(duration, display) {
+  let timer = duration, minutes, seconds;
+  setInterval(function () {
+    minutes = parseInt(timer / 60, 10);
+    seconds = parseInt(timer % 60, 10);
+    minutes = minutes < 10 ? "0" + minutes : minutes;
+    seconds = seconds < 10 ? "0" + seconds : seconds;
+    display.textContent = minutes + ":" + seconds;
+    if (--timer < 0) {
+      timer = duration;
+      showResults();
+    }
+  }, 1000);
 }
 
-function startInterval() {
-  stopWatch = setInterval(displayCount, 1000);
-}
+function startCounter() {
+  let threeMinutes = 60*3;
+  let display = displayClock;
+  this.displayCount(threeMinutes, display);
+};
 
 function buildQuiz() {
   const output = [];
@@ -258,9 +278,9 @@ function showResults() {
 
 
 function init () {
+  startCounter();
   astroQuestionsRandom = shuffle(astroQuestions);
   buildQuiz();
-  startInterval();
   showSlides(0);
   resultsContainer.innerHTML = "";
 }
