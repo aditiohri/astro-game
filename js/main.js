@@ -129,6 +129,8 @@ const astroQuestions = [
 let astroQuestionsRandom = [];
 let slides;
 let currentSlide = 0;
+let secondCount = 0;
+let stopWatch;
 
 
 /*----- cached element references -----*/
@@ -138,6 +140,8 @@ const resultsContainer = document.getElementById('results');
 const submitButton = document.getElementById('submit');
 const nextButton = document.getElementById('next')
 const startButton = document.getElementById('welcome');
+const displayPara = document.querySelector(".clock");
+
 
 /*----- event listeners -----*/
 
@@ -159,6 +163,22 @@ function shuffle(array) {
     newArray.push(array[j]);
   }
   return newArray;
+}
+
+function displayCount() {
+  let minutes = Math.floor((secondCount % 3600) / 60);
+  let seconds = Math.floor(secondCount % 60);
+
+  let displaySeconds = seconds < 10 ? "0" + seconds : seconds;
+
+  displayPara.textContent = minutes + ":" + displaySeconds;
+
+  secondCount++;
+}
+
+function startInterval() {
+  stopWatch = setInterval(displayCount, 1000);
+  startBtn.disabled = true;
 }
 
 function buildQuiz() {
@@ -245,6 +265,7 @@ function init () {
   buildQuiz();
   showSlides(0);
   resultsContainer.innerHTML = "";
+  displayCount();
 }
 
 /* -----to do--------
