@@ -172,7 +172,7 @@ function displayCount() {
   let displayMinutes = minutes < 10 ? "0" + minutes : minutes;
   let displaySeconds = seconds < 10 ? "0" + seconds : seconds;
 
-  displayClock.textContent = displayMinutes + " : " + displaySeconds;
+  displayClock.textContent = displayMinutes + ":" + displaySeconds;
 
   secondCount++;
 }
@@ -266,7 +266,10 @@ function init () {
 }
 
 /* -----to do--------
-add timer that appears throughout quiz
-include time it took for user to complete quiz on results page
 if 3 minutes elapses then user directed to results page
+add images to slides
+resolve lag in timer loading on page
+include time it took for user to complete quiz on results page
+add landing page
+add overview page
 ------------------- */
