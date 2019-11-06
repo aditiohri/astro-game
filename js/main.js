@@ -162,27 +162,10 @@ function shuffle(array) {
   return newArray;
 }
 
-// function displayCount() {
-//   let minutes = Math.floor((secondCount % 3600) / 60);
-//   let seconds = Math.floor(secondCount % 60);
-
-//   let displayMinutes = minutes < 10 ? "0" + minutes : minutes;
-//   let displaySeconds = seconds < 10 ? "0" + seconds : seconds;
-
-//   displayClock.textContent = displayMinutes + ":" + displaySeconds;
-
-//   secondCount++; 
-  
-
-// }
-
-// function startInterval() {
-//   stopWatch = setInterval(displayCount, 1000);
-// }
 
 function displayCount(duration, display) {
   let timer = duration, minutes, seconds;
-  setInterval(function () {
+  let time = setInterval(function () {
     minutes = parseInt(timer / 60, 10);
     seconds = parseInt(timer % 60, 10);
     minutes = minutes < 10 ? "0" + minutes : minutes;
@@ -190,16 +173,22 @@ function displayCount(duration, display) {
     display.textContent = minutes + ":" + seconds;
     if (--timer < 0) {
       timer = duration;
-      showResults();
+      stopCounter(time);
+     return showResults();
+     
     }
   }, 1000);
 }
 
-function startCounter() {
-  let threeMinutes = 60*3;
+let startCounter = function () {
+  let threeMinutes = 5;
   let display = displayClock;
-  this.displayCount(threeMinutes, display);
+  displayCount(threeMinutes, display);
 };
+
+let stopCounter = function(id) {
+  clearInterval(id)
+}
 
 function buildQuiz() {
   const output = [];
@@ -253,7 +242,8 @@ function showNextSlide() {
 }
 
 function showResults() {
-  displayClock.style.display = "none";
+  displayClock.style.display = "inline-block";
+  nextButton.style.display = "none";
   slides[currentSlide].classList.remove('active-slide');
   slides[currentSlide].classList.add('slide');
   const answerContainers = quizContainer.querySelectorAll('.answers');
@@ -278,11 +268,12 @@ function showResults() {
 
 
 function init () {
-  startCounter();
   astroQuestionsRandom = shuffle(astroQuestions);
   buildQuiz();
   showSlides(0);
   resultsContainer.innerHTML = "";
+  startCounter();
+
 }
 
 /* -----to do--------
