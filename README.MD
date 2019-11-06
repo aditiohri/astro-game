@@ -73,8 +73,9 @@ Overview | | | update style; cache elements; event listeners |
 
 ## <a name="stretch"></a> **Stretch Goals**
 ________________
+* Customized results page with resources for user knowledge level
 * Hints
-* Different levels 
+* Different difficulty levels 
     + Different timer countdown runtimes
     + More/less challenging clues
 * Quiz for 7 traditional planets

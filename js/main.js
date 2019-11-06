@@ -153,9 +153,6 @@ submitButton.style.display = "none";
 function shuffle(array) {
   let newArray = [];
   let j = [];
-  // create a new array of empty objects
-  // using shuffle, grab objects from astroQuestions
-  // push astroQuestions objects into new array
   for (let i = array.length; i > 0; i--) {
     j = Math.floor(Math.random() * (i + 1));
     newArray.push(array[j]);
@@ -237,10 +234,6 @@ function showResults() {
   resultsContainer.innerHTML = correctAnswers + ' out of ' + astroQuestions.length;
 }
 
-function rankResults() {
-  //  include levels for different results 
-
-}
 
 function init () {
   astroQuestionsRandom = shuffle(astroQuestions);
@@ -250,6 +243,7 @@ function init () {
 }
 
 /* -----to do--------
-call back function for 15 seconds per question
-customize results page with different output according to different scores
+add timer that appears throughout quiz
+include time it took for user to complete quiz on results page
+if 3 minutes elapses then user directed to results page
 ------------------- */
