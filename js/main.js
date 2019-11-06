@@ -140,13 +140,12 @@ const resultsContainer = document.getElementById('results');
 const submitButton = document.getElementById('submit');
 const nextButton = document.getElementById('next')
 const startButton = document.getElementById('welcome');
-const displayPara = document.querySelector(".clock");
+const displayClock = document.querySelector(".clock");
 
 
 /*----- event listeners -----*/
 
 startButton.addEventListener('click', init);
-startButton.addEventListener('click', startInterval);
 submitButton.addEventListener('click', showResults);
 nextButton.addEventListener('click', showNextSlide);
 
@@ -154,6 +153,7 @@ nextButton.addEventListener('click', showNextSlide);
 /*----- functions -----*/ 
 nextButton.style.display = "none";
 submitButton.style.display = "none";
+displayClock.style.display = "block";
 
 function shuffle(array) {
   let newArray = [];
@@ -169,16 +169,16 @@ function displayCount() {
   let minutes = Math.floor((secondCount % 3600) / 60);
   let seconds = Math.floor(secondCount % 60);
 
+  let displayMinutes = minutes < 10 ? "0" + minutes : minutes;
   let displaySeconds = seconds < 10 ? "0" + seconds : seconds;
 
-  displayPara.textContent = minutes + ":" + displaySeconds;
+  displayClock.textContent = displayMinutes + " : " + displaySeconds;
 
   secondCount++;
 }
 
 function startInterval() {
   stopWatch = setInterval(displayCount, 1000);
-  startBtn.disabled = true;
 }
 
 function buildQuiz() {
@@ -195,11 +195,7 @@ function buildQuiz() {
   }
   output.push(
     `
-    <p class="clock">
-    <span="mins"></span>
-    <span="secs"></span>
-    </p>
-    <div class ="slide">
+      <div class ="slide">
       <div class ="question">
         ${currentQ.question}
       </div>
@@ -211,9 +207,9 @@ function buildQuiz() {
     );
   }
   );
-startButton.parentNode.removeChild(startButton);
-quizContainer.innerHTML = output.join('');
-slides = document.querySelectorAll('.slide');
+  startButton.parentNode.removeChild(startButton);
+  quizContainer.innerHTML = output.join('');
+  slides = document.querySelectorAll('.slide');
 }
 
 
@@ -237,6 +233,7 @@ function showNextSlide() {
 }
 
 function showResults() {
+  displayClock.style.display = "none";
   slides[currentSlide].classList.remove('active-slide');
   slides[currentSlide].classList.add('slide');
   const answerContainers = quizContainer.querySelectorAll('.answers');
@@ -263,9 +260,9 @@ function showResults() {
 function init () {
   astroQuestionsRandom = shuffle(astroQuestions);
   buildQuiz();
+  startInterval();
   showSlides(0);
   resultsContainer.innerHTML = "";
-  displayCount();
 }
 
 /* -----to do--------
