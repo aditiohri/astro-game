@@ -217,13 +217,14 @@ function buildQuiz() {
     `
       <div class ="slide flex-ctr">
       <img alt="glyph" src="${currentQ.image}">
-      <br>
       <div class ="question">
         ${currentQ.question}
       </div>
+      <br>
       <div class="answers">
         ${answers.join('')}
       </div>
+      <br>
     </div>
     `,
     );
@@ -243,10 +244,12 @@ function showSlides(x) {
   slides[x].classList.add('active-slide');
   if (currentSlide === slides.length-1) {
     nextButton.style.display = "none";
+    submitButton.textContent = "Submit Quiz";
     submitButton.style.display = "inline-block";
   } else {
     nextButton.style.display = "inline-block";
-    submitButton.style.display = "none";
+    submitButton.textContent = "End Quiz Early";
+    submitButton.style.display = "inline-block";
   }
 }
 

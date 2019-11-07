@@ -5,26 +5,37 @@
 
 body {
   display: flex;
-  flex-flow: column wrap;
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
+}
+
+button {
   justify-content: center;
   align-items: center;
 }
 
 .flex-ctr {
   display: flex;
-  flex-flow: column wrap;
+  flex-flow: column;
   justify-content: center;
   align-items: center;
 }
 
+.answers {
+  display: flex;
+  flex-flow: column;
+}
+
 .container {
   display: flex;
-  flex-flow: column wrap;
-  justify-content: center;
+  flex-flow: column;
+  justify-content: space-between;
   align-items: center;
   /* position: relative; */
-  height: 200px;
-  margin-top: 40px;
+  height: 75vh;
+  width: 55vh;
+  margin-top: 5vh;
   /* align-content: center; */
 }
 
