@@ -129,6 +129,7 @@ const astroQuestions = [
 let astroQuestionsRandom = [];
 let slides;
 let currentSlide = 0;
+let stopwatch;
 
 /*----- cached element references -----*/
 
@@ -150,7 +151,6 @@ nextButton.addEventListener('click', showNextSlide);
 /*----- functions -----*/ 
 nextButton.style.display = "none";
 submitButton.style.display = "none";
-displayClock.style.display = "block";
 
 function shuffle(array) {
   let newArray = [];
@@ -171,23 +171,37 @@ function displayCount(duration, display) {
     minutes = minutes < 10 ? "0" + minutes : minutes;
     seconds = seconds < 10 ? "0" + seconds : seconds;
     display.textContent = minutes + ":" + seconds;
+    // console.log('duration above the if statement:', duration)
+    // console.log('minutes above the if statement:', minutes)
+    // console.log('seconds above the if statement:', seconds)
+    // console.log('timer above the if statement:', timer)
     if (--timer < 0) {
       timer = duration;
+      let difference = parseInt(duration - start);
+      // console.log('timer:', timer)
+      // console.log('duration:', duration)
+      // console.log('minutes:', minutes)
+      // console.log('seconds:', seconds)
+      // console.log('time:', time);
       stopCounter(time);
-     return showResults();
-     
+      displayTime(difference);     
+      return showResults();
     }
   }, 1000);
 }
 
 let startCounter = function () {
-  let threeMinutes = 5;
+  let threeMinutes = 60;
   let display = displayClock;
   displayCount(threeMinutes, display);
 };
 
 let stopCounter = function(id) {
-  clearInterval(id)
+  clearInterval(id);
+}
+
+let displayTime = function (x) {
+  displayClock.textContent = x;
 }
 
 function buildQuiz() {
@@ -219,8 +233,8 @@ function buildQuiz() {
   startButton.parentNode.removeChild(startButton);
   quizContainer.innerHTML = output.join('');
   slides = document.querySelectorAll('.slide');
+  showSlides(currentSlide);
 }
-
 
 function showSlides(x) {
   slides[currentSlide].classList.remove('active-slide');
@@ -241,6 +255,9 @@ function showNextSlide() {
   showSlides(currentSlide + 1);
 }
 
+// include case for if user hits submit button while timer still going
+// create separate function to attach to submitbutton event listener
+
 function showResults() {
   displayClock.style.display = "inline-block";
   nextButton.style.display = "none";
@@ -260,20 +277,19 @@ function showResults() {
           answerContainers[qNumber].style.color = 'orange';
       }
   });
+  resultsContainer.innerHTML = correctAnswers + ' out of ' + astroQuestions.length;
   quizContainer.appendChild(startButton);
   startButton.textContent = "Take the quiz again!";
   submitButton.parentNode.removeChild(submitButton);
-  resultsContainer.innerHTML = correctAnswers + ' out of ' + astroQuestions.length;
 }
 
 
 function init () {
   astroQuestionsRandom = shuffle(astroQuestions);
-  buildQuiz();
-  showSlides(0);
   resultsContainer.innerHTML = "";
+  displayClock.style.display = "block";
   startCounter();
-
+  buildQuiz();
 }
 
 /* -----to do--------

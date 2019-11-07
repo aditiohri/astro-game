@@ -73,6 +73,7 @@ Overview | | | update style; cache elements; event listeners |
 
 ## <a name="stretch"></a> **Stretch Goals**
 ________________
+* Include time it took user to complete quiz on results page
 * Customized results page with resources for user knowledge level
 * Hints
 * Different difficulty levels 
