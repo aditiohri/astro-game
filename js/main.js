@@ -2,6 +2,7 @@
 
 const astroQuestions = [
   {
+    image: "assets/signs/aries.jpg",
     question: `This glyph, symbolic of a ram, represents the first sign of the zodiac. This fire sign is bold, action-oriented and assertive. Which sign is it?`,
     answers: {
       a: "Taurus",
@@ -12,6 +13,7 @@ const astroQuestions = [
     correctAnswer: "c"
   },
   {
+    image: "assets/signs/taurus.jpg",
     question: `The earth sign represented by this glyph is one of two ruled by Venus. Associated with fertility, abundance and luxury, this glyph is symbolic of a bull. Which sign is it?`,
     answers: {
       a: "Capricorn",
@@ -22,6 +24,7 @@ const astroQuestions = [
     correctAnswer: "d"
   },
   {
+    image: "assets/signs/gemini.jpg",
     question: `This sign loves to chat. Highly intellectual, witty and adaptable, the glyph for this air sign is a symbol for twins, speaking to its dualistic nature. Which sign is it?`,
     answers: {
       a: "Gemini",
@@ -32,6 +35,7 @@ const astroQuestions = [
     correctAnswer: "a"
   },
   {
+    image: "assets/signs/cancer.jpg",
     question: `Some say this water sign has a hard shell. Known for being emotional intuitive, and deeply maternal, some say its glyph represent breasts, the primary source of nourishment for babies. Which sign is it?`,
     answers: {
       a: "Scorpio",
@@ -42,6 +46,7 @@ const astroQuestions = [
     correctAnswer: "b"
   },
   {
+    image: "assets/signs/leo.jpg",
     question: `Fixed fire sign; drama; warm; effusive; center of attention; courageous. Which sign is it?`,
     answers: {
       a: "Aries",
@@ -52,6 +57,7 @@ const astroQuestions = [
     correctAnswer: "b"
   },
   {
+    image: "assets/signs/virgo.jpg",
     question: `Mutable earth sign; reliable; goal-oriented; great workers; attention to detail; perfectionists; caring for the body. Which sign is it?`,
     answers: {
       a: "Libra",
@@ -62,6 +68,7 @@ const astroQuestions = [
     correctAnswer: "d"
   },
   {
+    image: "assets/signs/libra.jpg",
     question: `Cardinal air sign; diplomatic; social; gracious; loves beauty; great fashion sense; Which sign is it?`,
     answers: {
       a: "Libra",
@@ -72,6 +79,7 @@ const astroQuestions = [
     correctAnswer: "a"
   },
   {
+    image: "assets/signs/scorpio.jpg",
     question: `Fixed water; Dramatic, passionate probing, lover of mysteries + understanding human psychology, secretive, tenacious; Which sign is it?`,
     answers: {
       a: "Sagittarius",
@@ -82,6 +90,7 @@ const astroQuestions = [
     correctAnswer: "b"
   },
   {
+    image: "assets/signs/sagittarius.jpg",
     question: `Mutable fire; Philosophical; adventurous; independent; restless; optimistic; Which sign is it?`,
     answers: {
       a: "Aries",
@@ -92,6 +101,7 @@ const astroQuestions = [
     correctAnswer: "c"
   },
   {
+    image: "assets/signs/capricorn.jpg",
     question: `Cardinal earth. Industrious; resilient; authoritative; dependable; does well in structure; disciplined; Which sign is it?`,
     answers: {
       a: "Capricorn",
@@ -102,6 +112,7 @@ const astroQuestions = [
     correctAnswer: "a"
   },
   {
+    image: "assets/signs/aquarius.jpg",
     question: `Fixed air; humanitarian; eccentric; idealistic; detached; inventive; opinionated; Which sign is it?`,
     answers: {
       a: "Leo",
@@ -112,6 +123,7 @@ const astroQuestions = [
     correctAnswer: "d"
   },
   {
+    image: "assets/signs/pisces.jpg",
     question: `Mutable water; artistic; sensitive; impressionable; compassionate; tender; dreamy; Which sign is it?`,
     answers: {
       a: "Cancer",
@@ -205,6 +217,7 @@ function buildQuiz() {
   output.push(
     `
       <div class ="slide">
+      <img src="${qNumber.image}"
       <div class ="question">
         ${currentQ.question}
       </div>
