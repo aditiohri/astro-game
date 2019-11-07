@@ -290,9 +290,12 @@ function init () {
 }
 
 /* -----to do--------
-add images to slides
+style images
+style quiz container
 add landing page
-update question content
+style landing page
 add overview page
+style overview page
+update question content
 resolve lag in timer loading on page
 ------------------- */
