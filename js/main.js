@@ -129,7 +129,6 @@ const astroQuestions = [
 let astroQuestionsRandom = [];
 let slides;
 let currentSlide = 0;
-let stopwatch;
 
 /*----- cached element references -----*/
 
@@ -153,13 +152,13 @@ nextButton.style.display = "none";
 submitButton.style.display = "none";
 
 function shuffle(array) {
-  let newArray = [];
-  let j = [];
-  for (let i = array.length; i > 0; i--) {
-    j = Math.floor(Math.random() * (i + 1));
-    newArray.push(array[j]);
+  for (let i = array.length - 1; i > 0; i--) {
+    let j = Math.floor(Math.random() * i);
+    let temp = array[i];
+    array[i] = array[j];
+    array[j] = temp;
   }
-  return newArray;
+  return array;
 }
 
 
@@ -171,37 +170,29 @@ function displayCount(duration, display) {
     minutes = minutes < 10 ? "0" + minutes : minutes;
     seconds = seconds < 10 ? "0" + seconds : seconds;
     display.textContent = minutes + ":" + seconds;
-    // if (--timer > 0 && submitButton.disabled) {
-    //   timer = duration - (minutes + seconds);
-    //   stopCounter(time);
-    //   return displayTime(timer); 
-    // }
-      if (--timer < 0) {
+    stopwatch = time;
+    if (--timer < 0) {
       timer = duration;
       stopCounter(time);
-      displayTime(timer);     
-      return showResults();
+     return showResults();
     }
   }, 1000);
 }
 
 let startCounter = function () {
-  let threeMinutes = 60*3;
+  let threeMinutes = 180;
   let display = displayClock;
   displayCount(threeMinutes, display);
 };
 
 let stopCounter = function(id) {
-  clearInterval(id);
-}
-
-let displayTime = function (x) {
-  displayClock.textContent = x;
+  clearInterval(id)
 }
 
 function buildQuiz() {
+  shuffle(astroQuestions);
   const output = [];
-  astroQuestionsRandom.forEach((currentQ, qNumber) => {
+  astroQuestions.forEach((currentQ, qNumber) => {
     const answers = [];
   for (letter in currentQ.answers) {
     answers.push(
@@ -228,8 +219,8 @@ function buildQuiz() {
   startButton.parentNode.removeChild(startButton);
   quizContainer.innerHTML = output.join('');
   slides = document.querySelectorAll('.slide');
-  showSlides(currentSlide);
 }
+
 
 function showSlides(x) {
   slides[currentSlide].classList.remove('active-slide');
@@ -251,7 +242,8 @@ function showNextSlide() {
 }
 
 function showResults() {
-  displayClock.style.display = "inline-block";
+  stopCounter(stopwatch);
+  displayClock.style.display = "none";
   nextButton.style.display = "none";
   slides[currentSlide].classList.remove('active-slide');
   slides[currentSlide].classList.add('slide');
@@ -269,26 +261,28 @@ function showResults() {
           answerContainers[qNumber].style.color = 'orange';
       }
   });
-  resultsContainer.innerHTML = correctAnswers + ' out of ' + astroQuestions.length;
   quizContainer.appendChild(startButton);
   startButton.textContent = "Take the quiz again!";
-  submitButton.parentNode.removeChild(submitButton);
+  submitButton.style.display = "none";
+  resultsContainer.innerHTML = correctAnswers + ' out of ' + astroQuestions.length;
 }
 
 
 function init () {
-  astroQuestionsRandom = shuffle(astroQuestions);
-  resultsContainer.innerHTML = "";
+  nextButton.style.display = "inline-block";
+  submitButton.style.display = "none";
   displayClock.style.display = "block";
-  startCounter();
   buildQuiz();
+  currentSlide = 0;
+  showSlides(currentSlide);
+  resultsContainer.innerHTML = "";
+  startCounter();
 }
 
 /* -----to do--------
-if 3 minutes elapses then user directed to results page
 add images to slides
-resolve lag in timer loading on page
-include time it took for user to complete quiz on results page
 add landing page
+update question content
 add overview page
+resolve lag in timer loading on page
 ------------------- */
