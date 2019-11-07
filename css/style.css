@@ -1,6 +1,37 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+body {
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.flex-ctr {
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: center;
+  align-items: center;
+  /* position: relative; */
+  height: 200px;
+  margin-top: 40px;
+  /* align-content: center; */
+}
+
 img {
   height: 40vh;
   width: 40vh;
+  align-content: center;
 }
 
 .slide{
@@ -17,11 +48,7 @@ img {
   .active-slide{
     /* opacity: 1;
     z-index: 2; */
-    display: block;
+    display: inline-block;
+    align-content: center;
   };
 
-  .quiz-container{
-    position: relative;
-    height: 200px;
-    margin-top: 40px;
-  }

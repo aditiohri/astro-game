@@ -135,7 +135,6 @@ const astroQuestions = [
   },
 ]
 
-
 /*----- app's state (variables) -----*/
 
 let astroQuestionsRandom = [];
@@ -216,7 +215,7 @@ function buildQuiz() {
   }
   output.push(
     `
-      <div class ="slide">
+      <div class ="slide flex-ctr">
       <img alt="glyph" src="${currentQ.image}">
       <br>
       <div class ="question">
@@ -290,7 +289,6 @@ function init () {
 }
 
 /* -----to do--------
-style images
 style quiz container
 add landing page
 style landing page
