@@ -214,8 +214,7 @@ function buildQuiz() {
     );
   }
   output.push(
-    `
-      <div class ="slide">
+    ` <div class="slide">
       <img alt="glyph" src="${currentQ.image}">
       <div class ="question">
         ${currentQ.question}
@@ -223,8 +222,7 @@ function buildQuiz() {
       <div class="answers">
         ${answers.join('')}
       </div>
-    </div>
-    `,
+    </div>`,
     );
   }
   );
