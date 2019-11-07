@@ -162,20 +162,20 @@ function shuffle(array) {
   return newArray;
 }
 
-let time = setInterval(function () {
-  minutes = parseInt(timer / 60, 10);
-  seconds = parseInt(timer % 60, 10);
-  minutes = minutes < 10 ? "0" + minutes : minutes;
-  seconds = seconds < 10 ? "0" + seconds : seconds;
-  display.textContent = minutes + ":" + seconds;
-}
-// if (--timer > 0 && submitButton.disabled) {
-//   timer = duration - (minutes + seconds);
-//   stopCounter(time);
-//   return displayTime(timer); 
-// }
+
 function displayCount(duration, display) {
   let timer = duration, minutes, seconds;
+  let time = setInterval(function () {
+    minutes = parseInt(timer / 60, 10);
+    seconds = parseInt(timer % 60, 10);
+    minutes = minutes < 10 ? "0" + minutes : minutes;
+    seconds = seconds < 10 ? "0" + seconds : seconds;
+    display.textContent = minutes + ":" + seconds;
+    // if (--timer > 0 && submitButton.disabled) {
+    //   timer = duration - (minutes + seconds);
+    //   stopCounter(time);
+    //   return displayTime(timer); 
+    // }
       if (--timer < 0) {
       timer = duration;
       stopCounter(time);
@@ -250,11 +250,7 @@ function showNextSlide() {
   showSlides(currentSlide + 1);
 }
 
-// include case for if user hits submit button while timer still going
-// create separate function to attach to submitbutton event listener
-
 function showResults() {
-  submitButton.disabled = true;
   displayClock.style.display = "inline-block";
   nextButton.style.display = "none";
   slides[currentSlide].classList.remove('active-slide');
