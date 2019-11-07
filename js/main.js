@@ -255,11 +255,7 @@ function showResults() {
       const userAnswer = (answerContainer.querySelector(selector) || {}).value;
       if (userAnswer === currentQ.correctAnswer) {
           correctAnswers++;
-      answerContainers[qNumber].style.color = 'purple';
-      }
-      else {
-          answerContainers[qNumber].style.color = 'orange';
-      }
+              }
   });
   quizContainer.appendChild(startButton);
   startButton.textContent = "Take the quiz again!";
