@@ -162,36 +162,31 @@ function shuffle(array) {
   return newArray;
 }
 
-
+let time = setInterval(function () {
+  minutes = parseInt(timer / 60, 10);
+  seconds = parseInt(timer % 60, 10);
+  minutes = minutes < 10 ? "0" + minutes : minutes;
+  seconds = seconds < 10 ? "0" + seconds : seconds;
+  display.textContent = minutes + ":" + seconds;
+}
+// if (--timer > 0 && submitButton.disabled) {
+//   timer = duration - (minutes + seconds);
+//   stopCounter(time);
+//   return displayTime(timer); 
+// }
 function displayCount(duration, display) {
   let timer = duration, minutes, seconds;
-  let time = setInterval(function () {
-    minutes = parseInt(timer / 60, 10);
-    seconds = parseInt(timer % 60, 10);
-    minutes = minutes < 10 ? "0" + minutes : minutes;
-    seconds = seconds < 10 ? "0" + seconds : seconds;
-    display.textContent = minutes + ":" + seconds;
-    // console.log('duration above the if statement:', duration)
-    // console.log('minutes above the if statement:', minutes)
-    // console.log('seconds above the if statement:', seconds)
-    // console.log('timer above the if statement:', timer)
-    if (--timer < 0) {
+      if (--timer < 0) {
       timer = duration;
-      let difference = parseInt(duration - start);
-      // console.log('timer:', timer)
-      // console.log('duration:', duration)
-      // console.log('minutes:', minutes)
-      // console.log('seconds:', seconds)
-      // console.log('time:', time);
       stopCounter(time);
-      displayTime(difference);     
+      displayTime(timer);     
       return showResults();
     }
   }, 1000);
 }
 
 let startCounter = function () {
-  let threeMinutes = 60;
+  let threeMinutes = 60*3;
   let display = displayClock;
   displayCount(threeMinutes, display);
 };
@@ -259,6 +254,7 @@ function showNextSlide() {
 // create separate function to attach to submitbutton event listener
 
 function showResults() {
+  submitButton.disabled = true;
   displayClock.style.display = "inline-block";
   nextButton.style.display = "none";
   slides[currentSlide].classList.remove('active-slide');
