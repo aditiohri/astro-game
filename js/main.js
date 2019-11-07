@@ -87,7 +87,7 @@ const astroQuestions = [
       c: "Scorpio",
       d: "Pisces",
     },
-    correctAnswer: "b"
+    correctAnswer: "c"
   },
   {
     image: "./assets/signs/sagittarius.jpg",
@@ -215,16 +215,14 @@ function buildQuiz() {
   }
   output.push(
     `
-      <div class ="slide flex-ctr">
+      <div class ="slide">
       <img alt="glyph" src="${currentQ.image}">
       <div class ="question">
         ${currentQ.question}
       </div>
-      <br>
       <div class="answers">
         ${answers.join('')}
       </div>
-      <br>
     </div>
     `,
     );
