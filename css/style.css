@@ -36,7 +36,8 @@ body {
       }
   
     #results {
-      margin-bottom: 3rem;
+      margin-top: 1.5rem;
+      margin-bottom: 1.5rem;
       border: 2px dotted orange;
     }
 
