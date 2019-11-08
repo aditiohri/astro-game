@@ -65,7 +65,8 @@ Page | HTML | CSS | Javascript | Assets| Keywords To Research
 -----|------|-----|------------|-------|-----------
 Landing | ```<img id="landing"> <div id="welcome"> <div id="click">```| flexbox | DOM Manipulation to generate all 18 pages through one html file | 12 zodiac glyph images | section display none; turn off sections html javascript; toggle display none and flex
 Overview | | | update style; cache elements; event listeners | 
-12 Quiz | ```<radio>``` | | create objects for stored correct responses and user-generated objects for player responses; ```let playerScore = []```; callback functions | | | | | 
+12 Quiz | ```<radio>``` | | create objects for stored correct responses and user-generated objects for player responses; ```let playerScore = []```; callback functions | 
+Results | | | | 
 
 [top](#home)
 
