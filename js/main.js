@@ -295,7 +295,6 @@ function init () {
 }
 
 /* -----to do--------
-style all buttons
 style instructions
 add image to results page
 deploy at 11 am
