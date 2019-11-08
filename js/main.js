@@ -149,6 +149,7 @@ const submitButton = document.getElementById('submit');
 const nextButton = document.getElementById('next');
 const startButton = document.getElementById('welcome');
 const displayClock = document.querySelector(".clock");
+const landing = document.getElementById('landing');
 
 
 /*----- event listeners -----*/
@@ -274,10 +275,10 @@ function showResults() {
           correctAnswers++;
               }
   });
-  quizContainer.appendChild(startButton);
+  landing.appendChild(startButton);
   startButton.textContent = "Take the quiz again!";
   submitButton.style.display = "none";
-  resultsContainer.innerHTML = correctAnswers + ' out of ' + astroQuestions.length;
+  resultsContainer.innerHTML = `You answered ${correctAnswers} questions correctly out of ${astroQuestions.length}!`;
 }
 
 
@@ -291,11 +292,11 @@ function init () {
 }
 
 /* -----to do--------
-style quiz container
-add landing page
-style landing page
-add overview page
-style overview page
+style all buttons
+add instructions to start button page
+style instructions
+add color scheme
+add font
 update question content
 resolve lag in timer loading on page
 ------------------- */
