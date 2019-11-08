@@ -12,51 +12,65 @@ body {
   width: 100vw;
 }
 
+.quiz-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  height: 500px;
+  width: 500px;
+  border: 3px solid purple;
+
+}
     .clock {
       align-content: center;
     }
+
 
     #results {
       display: flex;
       align-content: center;
     }
 
-    .quiz-container {
-      display: flex;
-      flex-flow: column wrap;
-      height: 500px;
-      width: 500px;
-    }
-
       .slide {
         display: none;
-        /* z-index: 1;
-        opacity: 0;
-        transition: opacity 0.5s; */
-        };
+        }
 
         .active-slide {
-        /* opacity: 1;
-        z-index: 2; */
-        display: flex;
-        };
+        display: inline-flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        height: 500px;
+        width: 500px;
+        border: 3px dotted purple;
+              }
       
           img {
-            height: 250px;
-            width: 250px;
-            align-self: flex-start;
+            justify-content: flex-start;
+            height: 10vh;
+            width: 10vw;
+            border: 3px solid black;
           }
+
           .answers {
-            align-items: flex-start;
-            flex-direction: column nowrap;
+            justify-content: flex-end;
+            flex-direction: column;
+            border: 3px solid green;
+
           }
 
           .question {
-            align-items: flex-end;
+            flex-direction: row wrap;
+            justify-content: flex-end;
+            border: 3px solid red;
+
           }
 
           #buttons {
-           align-items: flex-end;
+          display: flex;
+          border: 3px dotted blue;
+
                 }
 
 

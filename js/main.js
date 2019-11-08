@@ -146,7 +146,7 @@ let currentSlide = 0;
 const quizContainer = document.getElementById('quiz');
 const resultsContainer = document.getElementById('results');
 const submitButton = document.getElementById('submit');
-const nextButton = document.getElementById('next')
+const nextButton = document.getElementById('next');
 const startButton = document.getElementById('welcome');
 const displayClock = document.querySelector(".clock");
 
@@ -214,15 +214,17 @@ function buildQuiz() {
     );
   }
   output.push(
-    ` <div class="slide">
+    ` <section class="slide">
+      <div class="image">
       <img alt="glyph" src="${currentQ.image}">
+      </div>
       <div class ="question">
         ${currentQ.question}
       </div>
       <div class="answers">
         ${answers.join('')}
       </div>
-    </div>`,
+    </section>`,
     );
   }
   );
