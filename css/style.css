@@ -109,6 +109,9 @@ body {
       .slide {
         display: none;
         }
+      .visible {
+        display: none;
+      }
 
         .active-slide {
         display: flex;

@@ -169,16 +169,16 @@ nextButton.style.display = "none";
 submitButton.style.display = "none";
 
 function showInfo() {
-introduction.classList.toggle('slide');
-hideMe.classList.toggle('slide');
-toggleThis.style.display = "none";
+introduction.classList.toggle('visible');
+hideMe.classList.toggle('visible');
+toggleThis.classList.toggle('visible');
 insert.innerHTML = `<h4>Click to Hide Instructions</h4>`;
 }
 
 function showIntro() {
-  introduction.classList.toggle('slide');
-  hideMe.classList.toggle('slide');
-  toggleThis.style.display = "flex";
+  introduction.classList.toggle('visible');
+  hideMe.classList.toggle('visible');
+  toggleThis.classList.toggle('visible');
   insert.innerHTML = ``;
 }
 
