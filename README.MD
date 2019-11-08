@@ -17,7 +17,7 @@ The growing popularity of astrology as a means to self-knowledge rather than a d
 
 <u>Rules</u>
 
-The quiz consists of twelve questions - one of reach sign of the zodiac. On each of the twelve quiz pages, the user will be presented with a glyph of a sign alongside a brief description of the image and its corresponding sign. 
+The quiz consists of twelve questions - one of each sign of the zodiac. On each of the twelve quiz pages, the user will be presented with a glyph of a sign alongside a brief description of the image and its corresponding sign. 
 
 <u>Challenge</u>
 
@@ -33,7 +33,7 @@ At the end of the quiz, the user will receive a score, a rank and links to addit
 ________________
 Landing Page | Overview Page | Quiz Pages | Results Page
 -------------|---------------|------------|-------------
-User clicks a tab to read instructions with the option to skip the instructions anre begin quiz right away. | The instructions provide a detailed overview of the game, including introduction to astrological terminology and a description of the game's structure. After reading, the player clicks a button to begin the timed quiz. | Randomly generated page from one to twelve, prompting user to match glyph to corresponding sign in zodiac. A timed countdown gives user three minutes to complete quiz. | Results page provides user their score and an opportunity to take the quiz again.
+User clicks a tab to read instructions with the option to skip the instructions and begin quiz right away. | The instructions provide a detailed overview of the game, including introduction to astrological terminology and a description of the game's structure. After reading, the player clicks a button to begin the timed quiz. | Randomly generated page from one to twelve, prompting user to match glyph to corresponding sign in zodiac. A timed countdown gives user three minutes to complete quiz. | Results page provides user their score and an opportunity to take the quiz again.
 
 [top](#home)
 
