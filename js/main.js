@@ -3,7 +3,7 @@
 const astroQuestions = [
   {
     image: "./assets/signs/aries.jpg",
-    question: `This glyph, symbolic of a ram, represents the first sign of the zodiac. This fire sign is bold, action-oriented and assertive. Which sign is it?`,
+    question: `Bold, assertive, energetic, self-starter, competitive, impulsive & stubborn.`,
     answers: {
       a: "Taurus",
       b: "Cancer",
@@ -14,7 +14,7 @@ const astroQuestions = [
   },
   {
     image: "./assets/signs/taurus.jpg",
-    question: `The earth sign represented by this glyph is one of two ruled by Venus. Associated with fertility, abundance and luxury, this glyph is symbolic of a bull. Which sign is it?`,
+    question: `Sensual, pragmatic, calm, focussed, stubborn, materialistic & indulgent.`,
     answers: {
       a: "Capricorn",
       b: "Libra",
@@ -25,7 +25,7 @@ const astroQuestions = [
   },
   {
     image: "./assets/signs/gemini.jpg",
-    question: `This sign loves to chat. Highly intellectual, witty and adaptable, the glyph for this air sign is a symbol for twins, speaking to its dualistic nature. Which sign is it?`,
+    question: `Adaptable, perceptive, witty, independent, contradictory, nervous & charming.`,
     answers: {
       a: "Gemini",
       b: "Scorpio",
@@ -36,7 +36,7 @@ const astroQuestions = [
   },
   {
     image: "./assets/signs/cancer.jpg",
-    question: `Some say this water sign has a hard shell. Known for being emotional intuitive, and deeply maternal, some say its glyph represent breasts, the primary source of nourishment for babies. Which sign is it?`,
+    question: `Intuitive, generous, cautious, nostalgic, home-loving, resentful, & self-protective.`,
     answers: {
       a: "Scorpio",
       b: "Cancer",
@@ -47,7 +47,7 @@ const astroQuestions = [
   },
   {
     image: "./assets/signs/leo.jpg",
-    question: `Fixed fire sign; drama; warm; effusive; center of attention; courageous. Which sign is it?`,
+    question: `Playful, charismatic, confident, loyal, controlling, quick-tempered, patronizing & vain.`,
     answers: {
       a: "Aries",
       b: "Leo",
@@ -58,7 +58,7 @@ const astroQuestions = [
   },
   {
     image: "./assets/signs/virgo.jpg",
-    question: `Mutable earth sign; reliable; goal-oriented; great workers; attention to detail; perfectionists; caring for the body. Which sign is it?`,
+    question: `Diligent, analytical, organized, efficient, witty, overcritical, perfectionist, demanding & nagging.`,
     answers: {
       a: "Libra",
       b: "Sagittarius",
@@ -69,7 +69,7 @@ const astroQuestions = [
   },
   {
     image: "./assets/signs/libra.jpg",
-    question: `Cardinal air sign; diplomatic; social; gracious; loves beauty; great fashion sense; Which sign is it?`,
+    question: `Diplomatic, easygoing, fair, tactful, charming, gullible, indecisive & codependent.`,
     answers: {
       a: "Libra",
       b: "Virgo",
@@ -80,7 +80,7 @@ const astroQuestions = [
   },
   {
     image: "./assets/signs/scorpio.jpg",
-    question: `Fixed water; Dramatic, passionate probing, lover of mysteries + understanding human psychology, secretive, tenacious; Which sign is it?`,
+    question: `Charismatic, powerful, intuitive, competitive, intense, obsessive, possessive, moody & aggressive.`,
     answers: {
       a: "Sagittarius",
       b: "Capricorn",
@@ -91,7 +91,7 @@ const astroQuestions = [
   },
   {
     image: "./assets/signs/sagittarius.jpg",
-    question: `Mutable fire; Philosophical; adventurous; independent; restless; optimistic; Which sign is it?`,
+    question: `Philosophical, open-minded, optimistic, adventurous, talkative, blunt, dogmatic & restless.`,
     answers: {
       a: "Aries",
       b: "Leo",
@@ -102,7 +102,7 @@ const astroQuestions = [
   },
   {
     image: "./assets/signs/capricorn.jpg",
-    question: `Cardinal earth. Industrious; resilient; authoritative; dependable; does well in structure; disciplined; Which sign is it?`,
+    question: `Reliable, sophisticated, careful, tenacious, ruthless, shrewd, condescending & unmoveable.`,
     answers: {
       a: "Capricorn",
       b: "Leo",
@@ -113,7 +113,7 @@ const astroQuestions = [
   },
   {
     image: "./assets/signs/aquarius.jpg",
-    question: `Fixed air; humanitarian; eccentric; idealistic; detached; inventive; opinionated; Which sign is it?`,
+    question: `Humanitarian, independent, original, generous, aloof, unpredictable, dogmatic & rebellious.`,
     answers: {
       a: "Leo",
       b: "Libra",
@@ -124,7 +124,7 @@ const astroQuestions = [
   },
   {
     image: "./assets/signs/pisces.jpg",
-    question: `Mutable water; artistic; sensitive; impressionable; compassionate; tender; dreamy; Which sign is it?`,
+    question: `Visionary, spiritual, compassionate, imaginative, gullible, self-pitying, escapist & secretive.`,
     answers: {
       a: "Cancer",
       b: "Taurus",
