@@ -150,6 +150,7 @@ const nextButton = document.getElementById('next');
 const startButton = document.getElementById('welcome');
 const displayClock = document.querySelector(".clock");
 const landing = document.getElementById('landing');
+const instructions = document.getElementById('instructions');
 
 
 /*----- event listeners -----*/
@@ -261,6 +262,7 @@ function showNextSlide() {
 
 function showResults() {
   stopCounter(stopwatch);
+  resultsContainer.style.display = "flex";
   displayClock.style.display = "none";
   nextButton.style.display = "none";
   slides[currentSlide].classList.remove('active-slide');
@@ -289,10 +291,11 @@ function init () {
   resultsContainer.innerHTML = "";
   displayClock.style.display = "flex";
   startCounter();
+  instructions.style.display = "none";
 }
 
 /* -----to do--------
-add color scheme
+update color scheme
 style all buttons
 add instructions to start button page
 style instructions
