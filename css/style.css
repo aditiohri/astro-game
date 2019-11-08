@@ -3,6 +3,14 @@
   margin: 0;
 }
 
+:root {
+  --main-bg: #462255;
+  --accent-bg: #9FAF90;
+  --text-accent: #CEB6BC;
+  --accent-light: #FAF6F5;
+  --accent-dark: #655F41;
+}
+
 body {
   display: flex;
   flex-flow: column;
@@ -36,7 +44,6 @@ body {
       }
   
     #results {
-      margin-top: 1.5rem;
       margin-bottom: 1.5rem;
       border: 2px dotted orange;
     }
