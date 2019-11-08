@@ -17,8 +17,8 @@ body {
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  height: 500px;
-  width: 500px;
+  height: 15rem;
+  width: 30rem;
   border: 3px solid purple;
 
 }
@@ -44,8 +44,8 @@ body {
         align-items: center;
         align-content: center;
         align-self: center;
-        height: 500px;
-        width: 500px;
+        height: 15rem;
+        width: 30rem;
         border: 3px dotted purple;
               }
       
@@ -58,14 +58,25 @@ body {
 
           .QandA {
             display: flex;
-            flex-flow: column wrap;
+            flex-flow: column nowrap;
+            justify-content: space-evenly;
+            height: 15rem;
+            width: 15rem;
           }
           .answers {
-            justify-content: flex-start;
-            flex-direction: column wrap;
+            height: 8rem;
+            width: 13rem;
+            display: inline-block;
+            justify-content: flex-end;
+            align-items: flex-end;
+            flex-direction: column;
             border: 3px solid green;
 
           }
+              label {
+                display: block;
+                align-items: flex-end;
+              }
 
           .question {
             justify-content: flex-end;
@@ -82,9 +93,15 @@ body {
                 .clock {
                   display: none;
                   justify-content: center;
-                  align-items: center;
+                  align-items: flex-end;
                   height: 3em;
-                  width: 10em;
+                  width: 5em;
                   border: 3px dotted pink;
+                }
+
+                #next, #submit {
+                  display: flex;
+                  justify-content: flex-end;
+                  align-items: flex-end;
                 }
             
