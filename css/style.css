@@ -23,18 +23,10 @@ body {
 
 }
     .welcome {
-      order: 1;
       align-items: center;
       justify-content: center;
     }
-    .clock {
-      display: none;
-      margin: 0 auto;
-      height: 3em;
-      width: 10em;
-      border: 3px dotted pink;
-    }
-
+   
 
     #results {
       display: flex;
@@ -47,9 +39,8 @@ body {
 
         .active-slide {
         display: flex;
-        flex-direction: row;
-        flex-wrap: nowrap;
-        justify-content: center;
+        flex-flow: row nowrap;
+        justify-content: flex-start;
         align-items: center;
         align-content: center;
         align-self: center;
@@ -65,23 +56,35 @@ body {
             border: 3px solid black;
           }
 
+          .QandA {
+            display: flex;
+            flex-flow: column wrap;
+          }
           .answers {
-            justify-content: flex-end;
-            flex-direction: column;
+            justify-content: flex-start;
+            flex-direction: column wrap;
             border: 3px solid green;
 
           }
 
           .question {
-            flex-direction: row wrap;
             justify-content: flex-end;
+            align-items: flex-end;
             border: 3px solid red;
           }
 
           #buttons {
           display: flex;
+          flex-direction: column;
           border: 3px dotted blue;
-
                 }
 
-
+                .clock {
+                  display: none;
+                  justify-content: center;
+                  align-items: center;
+                  height: 3em;
+                  width: 10em;
+                  border: 3px dotted pink;
+                }
+            

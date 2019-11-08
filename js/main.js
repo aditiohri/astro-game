@@ -197,7 +197,7 @@ let startCounter = function () {
 };
 
 let stopCounter = function(id) {
-  displayClock.display.style = "none";
+  displayClock.style.display = "none";
   clearInterval(id)
 }
 
@@ -286,7 +286,7 @@ function init () {
   currentSlide = 0;
   showSlides(currentSlide);
   resultsContainer.innerHTML = "";
-  displayClock.style.display = "block";
+  displayClock.style.display = "flex";
   startCounter();
 }
 
