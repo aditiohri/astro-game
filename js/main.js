@@ -295,12 +295,10 @@ function init () {
 }
 
 /* -----to do--------
-update color scheme
 style all buttons
+add font
 add instructions to start button page
 style instructions
-add font
-update question content
 add image to results page
 deploy at 11 am
 resolve lag in timer loading on page
