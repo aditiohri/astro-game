@@ -81,6 +81,8 @@ ________________
 * Different difficulty levels 
     + Different timer countdown runtimes
     + More/less challenging clues
+        * for different levels of astrology knowledge
+        * for emotional sensitivity (based on feedback that the keywords were harsh)
 * Quiz for 7 traditional planets
 * A skip question button that turns into the next question button after user answers q
 * Add a progress bar

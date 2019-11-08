@@ -3,7 +3,7 @@
 const astroQuestions = [
   {
     image: "./assets/signs/aries.jpg",
-    question: `Bold, assertive, energetic, self-starter, competitive, impulsive & stubborn.`,
+    question: `Bold, assertive, stubborn, self-starter, competitive, impulsive & energetic.`,
     answers: {
       a: "Taurus",
       b: "Cancer",
@@ -14,7 +14,7 @@ const astroQuestions = [
   },
   {
     image: "./assets/signs/taurus.jpg",
-    question: `Sensual, pragmatic, calm, focussed, stubborn, materialistic & indulgent.`,
+    question: `Sensual, pragmatic, indulgent, materialistic, calm, stubborn, & focussed.`,
     answers: {
       a: "Capricorn",
       b: "Libra",
@@ -47,7 +47,7 @@ const astroQuestions = [
   },
   {
     image: "./assets/signs/leo.jpg",
-    question: `Playful, charismatic, confident, loyal, controlling, quick-tempered, patronizing & vain.`,
+    question: `Playful, vain, loyal, quick-tempered, charismatic, controlling, patronizing & confident.`,
     answers: {
       a: "Aries",
       b: "Leo",
@@ -58,7 +58,7 @@ const astroQuestions = [
   },
   {
     image: "./assets/signs/virgo.jpg",
-    question: `Diligent, analytical, organized, efficient, witty, overcritical, perfectionist, demanding & nagging.`,
+    question: `Diligent, analytical, organized, nagging, witty, overcritical, perfectionist, demanding & efficient.`,
     answers: {
       a: "Libra",
       b: "Sagittarius",
@@ -69,7 +69,7 @@ const astroQuestions = [
   },
   {
     image: "./assets/signs/libra.jpg",
-    question: `Diplomatic, easygoing, fair, tactful, charming, gullible, indecisive & codependent.`,
+    question: `Diplomatic, easygoing, codependent, tactful, charming, gullible, indecisive & fair.`,
     answers: {
       a: "Libra",
       b: "Virgo",
@@ -80,7 +80,7 @@ const astroQuestions = [
   },
   {
     image: "./assets/signs/scorpio.jpg",
-    question: `Charismatic, powerful, intuitive, competitive, intense, obsessive, possessive, moody & aggressive.`,
+    question: `Charismatic, obsessive, intense, intuitive, competitive, possessive, aggressive & powerful.`,
     answers: {
       a: "Sagittarius",
       b: "Capricorn",
@@ -102,7 +102,7 @@ const astroQuestions = [
   },
   {
     image: "./assets/signs/capricorn.jpg",
-    question: `Reliable, sophisticated, careful, tenacious, ruthless, shrewd, condescending & unmoveable.`,
+    question: `Reliable, condescending, sophisticated, ruthless, careful, tenacious, shrewd & unmoveable.`,
     answers: {
       a: "Capricorn",
       b: "Leo",
@@ -113,7 +113,7 @@ const astroQuestions = [
   },
   {
     image: "./assets/signs/aquarius.jpg",
-    question: `Humanitarian, independent, original, generous, aloof, unpredictable, dogmatic & rebellious.`,
+    question: `Humanitarian, unpredictable, independent, aloof, dogmatic, original, generous, & rebellious.`,
     answers: {
       a: "Leo",
       b: "Libra",
@@ -124,7 +124,7 @@ const astroQuestions = [
   },
   {
     image: "./assets/signs/pisces.jpg",
-    question: `Visionary, spiritual, compassionate, imaginative, gullible, self-pitying, escapist & secretive.`,
+    question: `Visionary, self-pitying, spiritual, compassionate, escapist, imaginative, gullible, & secretive.`,
     answers: {
       a: "Cancer",
       b: "Taurus",
