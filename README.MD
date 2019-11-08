@@ -33,7 +33,7 @@ At the end of the quiz, the user will receive a score, a rank and links to addit
 ________________
 Landing Page | Overview Page | Quiz Pages | Results Page
 -------------|---------------|------------|-------------
-User clicks anywhere to begin. | Clicking the Landing page takes the user to an overview page, detailing the purpose of the game, an introduction to astrological terminology and a description of the game's structure. After reading, the player clicks a button to begin the timed quiz. | Randomly generated page from one to twelve, prompting user to match glyph to corresponding sign in zodiac. A timed countdown gives user fifteen seconds to answer. | Provides user their score and an associated rank (beginner / novice / intermediate / expert). Provides them with resources for further astrological research, depending on their rank.
+User clicks a tab to read instructions with the option to skip the instructions anre begin quiz right away. | The instructions provide a detailed overview of the game, including introduction to astrological terminology and a description of the game's structure. After reading, the player clicks a button to begin the timed quiz. | Randomly generated page from one to twelve, prompting user to match glyph to corresponding sign in zodiac. A timed countdown gives user three minutes to complete quiz. | Results page provides user their score and an opportunity to take the quiz again.
 
 [top](#home)
 
@@ -42,19 +42,19 @@ ________________
 
 **Landing**
 
-![Landing page wireframe](/assets/wireframe/landing.JPG)
+![Landing page wireframe](/assets/wireframe/landing.png)
 
 **Overview**
 
-![Overview page wireframe](/assets/wireframe/overview.JPG)
+![Overview page wireframe](/assets/wireframe/overview.png)
 
 **Quiz**
 
-![Quiz page wireframe](/assets/wireframe/quiz.JPG)
+![Quiz page wireframe](/assets/wireframe/quiz.png)
 
 **Results**
 
-![Results page wireframe](/assets/wireframe/result.JPG)
+![Results page wireframe](/assets/wireframe/results.png)
 
 [top](#home)
 
@@ -65,8 +65,7 @@ Page | HTML | CSS | Javascript | Assets| Keywords To Research
 -----|------|-----|------------|-------|-----------
 Landing | ```<img id="landing"> <div id="welcome"> <div id="click">```| flexbox | DOM Manipulation to generate all 18 pages through one html file | 12 zodiac glyph images | section display none; turn off sections html javascript; toggle display none and flex
 Overview | | | update style; cache elements; event listeners | 
-12 Quiz | ```<radio>``` | | create objects for stored correct responses and user-generated objects for player responses; ```let playerScore = []```; callback functions |
-4 Results | | beginner;novice;intermediate;expert| | 
+12 Quiz | ```<radio>``` | | create objects for stored correct responses and user-generated objects for player responses; ```let playerScore = []```; callback functions | | | | | 
 
 [top](#home)
 
@@ -74,7 +73,9 @@ Overview | | | update style; cache elements; event listeners |
 ## <a name="stretch"></a> **Stretch Goals**
 ________________
 * Include time it took user to complete quiz on results page
-* Customized results page with resources for user knowledge level
+* Customized results page 
+    + detailed in/correct answers 
+    + with resources for user knowledge level (beginner;novice;intermediate;expert)
 * Hints
 * Different difficulty levels 
     + Different timer countdown runtimes

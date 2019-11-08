@@ -313,10 +313,8 @@ function init () {
 }
 
 /* -----to do--------
-style instructions
-add image to results page
-deploy at 11 am
 toggle instructions in quiz pages
 link to landing page in results page
+customize results page
 resolve lag in timer loading on page
 ------------------- */
