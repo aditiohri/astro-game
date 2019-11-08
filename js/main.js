@@ -296,10 +296,10 @@ function init () {
 
 /* -----to do--------
 style all buttons
-add font
-add instructions to start button page
 style instructions
 add image to results page
 deploy at 11 am
+toggle instructions in quiz pages
+link to landing page in results page
 resolve lag in timer loading on page
 ------------------- */
