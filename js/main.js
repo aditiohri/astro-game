@@ -151,18 +151,36 @@ const startButton = document.getElementById('welcome');
 const displayClock = document.querySelector(".clock");
 const landing = document.getElementById('landing');
 const instructions = document.getElementById('instructions');
-
+const toggleThis = document.getElementById('toggle-this');
+const introduction = document.getElementById('info');
+const hideMe = document.getElementById('hide-me');
+const insert = document.getElementById('insert-here');
 
 /*----- event listeners -----*/
 
 startButton.addEventListener('click', init);
 submitButton.addEventListener('click', showResults);
 nextButton.addEventListener('click', showNextSlide);
-
+toggleThis.addEventListener('click', showInfo)
+insert.addEventListener('click', showIntro);
 
 /*----- functions -----*/ 
 nextButton.style.display = "none";
 submitButton.style.display = "none";
+
+function showInfo() {
+introduction.classList.toggle('slide');
+hideMe.classList.toggle('slide');
+toggleThis.style.display = "none";
+insert.innerHTML = `<h4>Click to Hide Instructions</h4>`;
+}
+
+function showIntro() {
+  introduction.classList.toggle('slide');
+  hideMe.classList.toggle('slide');
+  toggleThis.style.display = "flex";
+  insert.innerHTML = ``;
+}
 
 function shuffle(array) {
   for (let i = array.length - 1; i > 0; i--) {

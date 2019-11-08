@@ -49,6 +49,18 @@ body {
     justify-content: center;
     font-family: 'Libre Baskerville', serif;
   }
+
+  #hide-me {
+    margin-bottom: 2rem;
+  }
+
+  h4 {
+    display: flex;
+    justify-content: flex-end;
+  }
+  h4:hover {
+    cursor: grabbing;
+  }
     
    #instructions {
      width: 30rem;
