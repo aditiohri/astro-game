@@ -22,8 +22,17 @@ body {
   border: 3px solid purple;
 
 }
+    .welcome {
+      order: 1;
+      align-items: center;
+      justify-content: center;
+    }
     .clock {
-      align-content: center;
+      display: none;
+      margin: 0 auto;
+      height: 3em;
+      width: 10em;
+      border: 3px dotted pink;
     }
 
 
@@ -37,10 +46,13 @@ body {
         }
 
         .active-slide {
-        display: inline-flex;
+        display: flex;
         flex-direction: row;
+        flex-wrap: nowrap;
         justify-content: center;
         align-items: center;
+        align-content: center;
+        align-self: center;
         height: 500px;
         width: 500px;
         border: 3px dotted purple;
@@ -48,8 +60,8 @@ body {
       
           img {
             justify-content: flex-start;
-            height: 10vh;
-            width: 10vw;
+            height: 15rem;
+            width: 15rem;
             border: 3px solid black;
           }
 
@@ -64,7 +76,6 @@ body {
             flex-direction: row wrap;
             justify-content: flex-end;
             border: 3px solid red;
-
           }
 
           #buttons {

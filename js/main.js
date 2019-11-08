@@ -197,6 +197,7 @@ let startCounter = function () {
 };
 
 let stopCounter = function(id) {
+  displayClock.display.style = "none";
   clearInterval(id)
 }
 
@@ -218,11 +219,13 @@ function buildQuiz() {
       <div class="image">
       <img alt="glyph" src="${currentQ.image}">
       </div>
-      <div class ="question">
-        ${currentQ.question}
-      </div>
-      <div class="answers">
-        ${answers.join('')}
+      <div class="QandA">
+        <div class ="question">
+          ${currentQ.question}
+        </div>
+        <div class="answers">
+          ${answers.join('')}
+        </div>
       </div>
     </section>`,
     );
@@ -279,13 +282,11 @@ function showResults() {
 
 
 function init () {
-  nextButton.style.display = "inline-block";
-  submitButton.style.display = "none";
-  displayClock.style.display = "block";
   buildQuiz();
   currentSlide = 0;
   showSlides(currentSlide);
   resultsContainer.innerHTML = "";
+  displayClock.style.display = "block";
   startCounter();
 }
 
